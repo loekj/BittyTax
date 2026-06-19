@@ -44,7 +44,8 @@ LOW_CONFIDENCE_QUANTITY_DISTANCE = Decimal("0.25")
 
 
 def is_pt() -> bool:
-    return bool(config.country == COUNTRY_PT)
+    # Case-insensitive so a hand-edited config file (country: 'pt') still enables PT mode.
+    return str(config.country).upper() == COUNTRY_PT
 
 
 def flag_conversion(data_row: "DataRow") -> None:
@@ -118,8 +119,8 @@ def pair_conversion_legs(
         best_row = None
         best_key = None
         for recv_row in received_sorted:
-            if id(recv_row) in used:
-                continue
+            if id(recv_row) in used or recv_row is sent_row:
+                continue  # never consume a row, or pair a both-sided record, with itself
             recv_rec = recv_row.t_record
             if recv_rec is None:
                 continue

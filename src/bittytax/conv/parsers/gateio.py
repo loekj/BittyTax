@@ -134,15 +134,23 @@ def _parse_gateio_row(
 
 def _is_grouped_conversion(tx_ids: Dict[str, List["DataRow"]], row_dict: Dict[str, str]) -> bool:
     # A standalone airdrop is a lone positive row; a forced conversion routed through an "Airdrop"
-    # action has a matching opposite-sign leg of a different asset in the same action_data group.
-    group = tx_ids.get(row_dict["action_data"], [])
-    positive = Decimal(row_dict["change_amount"]) > 0
+    # action has a matching opposite-sign Airdrop leg of a different asset in the same action_data
+    # group. Only other Airdrop legs count and malformed amounts are ignored, so an unrelated row
+    # sharing the group can never trigger (or break) a merge.
     asset = row_dict["type"]
-    return any(
-        (Decimal(other.row_dict["change_amount"]) > 0) != positive
-        and other.row_dict["type"] != asset
-        for other in group
-    )
+    positive = Decimal(row_dict["change_amount"]) > 0
+    for other in tx_ids.get(row_dict["action_data"], []):
+        if other.row_dict["action_desc"] not in ("Airdrop", "Airdrop bonus"):
+            continue
+        if other.row_dict["type"] == asset:
+            continue
+        try:
+            other_positive = Decimal(other.row_dict["change_amount"]) > 0
+        except (ValueError, ArithmeticError):
+            continue
+        if other_positive != positive:
+            return True
+    return False
 
 
 def _make_trade(tx_rows: List["DataRow"], t_type: TrType = TrType.TRADE) -> None:

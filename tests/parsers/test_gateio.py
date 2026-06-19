@@ -78,3 +78,21 @@ def test_uk_grouped_airdrop_not_merged() -> None:
 
     assert data_rows[0].t_record is not None and data_rows[0].t_record.t_type == TrType.SPEND
     assert data_rows[1].t_record is not None and data_rows[1].t_record.t_type == TrType.AIRDROP
+
+
+def test_pt_airdrop_with_non_airdrop_sibling_not_merged() -> None:
+    # An Airdrop sharing an action_data group with a non-Airdrop leg (e.g. a withdrawal) is not a
+    # grouped conversion and must stay an Airdrop.
+    data_rows = _parse(
+        [
+            _row("Airdrop", "G3", "OP", "50.0"),
+            _row("Withdrawals", "G3", "USDT", "-50.0"),
+        ],
+        country="PT",
+    )
+
+    airdrop = data_rows[0].t_record
+    assert airdrop is not None
+    assert airdrop.t_type == TrType.AIRDROP
+    assert data_rows[1].t_record is not None
+    assert data_rows[1].t_record.t_type == TrType.WITHDRAWAL

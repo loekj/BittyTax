@@ -183,3 +183,36 @@ def test_low_confidence_pairing_by_quantity_warns_but_merges(
 
     assert "low-confidence" in capsys.readouterr().err
     assert sent.t_record is not None and sent.t_record.t_type == TrType.TRADE
+
+
+def test_is_pt_is_case_insensitive() -> None:
+    prev = config.config.get("country")
+    try:
+        for value in ("pt", "Pt", "PT"):
+            config.config["country"] = value
+            assert pt_mode.is_pt() is True
+        config.config["country"] = "uk"
+        assert pt_mode.is_pt() is False
+    finally:
+        config.config["country"] = prev
+
+
+def test_both_sided_record_is_not_self_paired() -> None:
+    # Defensive: a flagged record carrying both buy and sell must never pair with (and null) itself.
+    data_row = DataRow(1, [], [], "test")
+    data_row.timestamp = _dt(4, 1)
+    data_row.t_record = TransactionOutRecord(
+        TrType.TRADE,
+        _dt(4, 1),
+        buy_quantity=Decimal("1"),
+        buy_asset="BTC",
+        sell_quantity=Decimal("2"),
+        sell_asset="ETH",
+        wallet="W",
+    )
+    data_row.t_record.pt_conversion = True
+    data_files: List[Any] = [SimpleNamespace(data_rows=[data_row])]
+    pt_mode.merge_conversions(data_files)
+
+    assert data_row.t_record is not None  # not nulled by a spurious self-merge
+    assert data_row.t_record.t_type == TrType.TRADE
