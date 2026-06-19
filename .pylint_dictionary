@@ -47,6 +47,7 @@ refid
 refids
 repr
 snowtrace
+stderr
 subtype
 timestamp
 timezone

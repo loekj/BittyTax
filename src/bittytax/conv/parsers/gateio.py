@@ -13,6 +13,7 @@ from ...config import config
 from ..dataparser import DataParser, ParserArgs, ParserType
 from ..exceptions import DataRowError, UnexpectedTypeError
 from ..out_record import TransactionOutRecord
+from ..pt_mode import flag_conversion
 
 if TYPE_CHECKING:
     from ..datarow import DataRow
@@ -101,6 +102,10 @@ def _parse_gateio_row(
                 sell_asset=row_dict["type"],
                 wallet=WALLET,
             )
+        if _is_grouped_conversion(tx_ids, row_dict):
+            # PT mode: an "Airdrop" group that also holds an opposite-sign leg of a different asset
+            # is really a forced token conversion (swap); flag for merging (no-op in UK mode).
+            flag_conversion(data_row)
     elif row_dict["action_desc"] in ("HODL Interest", "Interest Income"):
         data_row.t_record = TransactionOutRecord(
             TrType.INTEREST,
@@ -125,6 +130,19 @@ def _parse_gateio_row(
         raise UnexpectedTypeError(
             parser.in_header.index("action_desc"), "action_desc", row_dict["action_desc"]
         )
+
+
+def _is_grouped_conversion(tx_ids: Dict[str, List["DataRow"]], row_dict: Dict[str, str]) -> bool:
+    # A standalone airdrop is a lone positive row; a forced conversion routed through an "Airdrop"
+    # action has a matching opposite-sign leg of a different asset in the same action_data group.
+    group = tx_ids.get(row_dict["action_data"], [])
+    positive = Decimal(row_dict["change_amount"]) > 0
+    asset = row_dict["type"]
+    return any(
+        (Decimal(other.row_dict["change_amount"]) > 0) != positive
+        and other.row_dict["type"] != asset
+        for other in group
+    )
 
 
 def _make_trade(tx_rows: List["DataRow"], t_type: TrType = TrType.TRADE) -> None:

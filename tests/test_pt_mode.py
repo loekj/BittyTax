@@ -3,6 +3,8 @@ from decimal import Decimal
 from types import SimpleNamespace
 from typing import Any, List
 
+import pytest
+
 from bittytax.bt_types import TrType
 from bittytax.config import config
 from bittytax.conv import pt_mode
@@ -148,3 +150,36 @@ def test_merge_conversions_ignores_unflagged_legs() -> None:
 
     assert sent.t_record is not None and sent.t_record.t_type == TrType.SPEND
     assert received.t_record is not None and received.t_record.t_type == TrType.AIRDROP
+
+
+def test_merge_conversions_emits_summary(capsys: pytest.CaptureFixture[str]) -> None:
+    sent = _spend("USDT", Decimal("100"), _dt(4, 1))
+    received = _airdrop("USDC", Decimal("100"), _dt(4, 1))
+    data_files: List[Any] = [SimpleNamespace(data_rows=[sent, received])]
+    pt_mode.merge_conversions(data_files)
+    assert "merged 1 forced conversion" in capsys.readouterr().err
+
+
+def test_low_confidence_pairing_by_time_warns_but_merges(
+    capsys: pytest.CaptureFixture[str],
+) -> None:
+    # 28 days apart: inside the 30-day merge window but beyond the 7-day confidence window.
+    sent = _spend("USDT", Decimal("100"), _dt(4, 1))
+    received = _airdrop("USDC", Decimal("100"), _dt(4, 29))
+    data_files: List[Any] = [SimpleNamespace(data_rows=[sent, received])]
+    pt_mode.merge_conversions(data_files)
+
+    assert "low-confidence" in capsys.readouterr().err
+    assert sent.t_record is not None and sent.t_record.t_type == TrType.TRADE  # still merged
+
+
+def test_low_confidence_pairing_by_quantity_warns_but_merges(
+    capsys: pytest.CaptureFixture[str],
+) -> None:
+    sent = _spend("AAA", Decimal("100"), _dt(4, 1))
+    received = _airdrop("BBB", Decimal("40"), _dt(4, 1))  # 60% quantity difference
+    data_files: List[Any] = [SimpleNamespace(data_rows=[sent, received])]
+    pt_mode.merge_conversions(data_files)
+
+    assert "low-confidence" in capsys.readouterr().err
+    assert sent.t_record is not None and sent.t_record.t_type == TrType.TRADE

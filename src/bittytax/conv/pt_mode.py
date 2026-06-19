@@ -24,6 +24,8 @@ from datetime import timedelta
 from decimal import Decimal
 from typing import TYPE_CHECKING, List, Optional, Tuple
 
+from colorama import Fore
+
 from ..bt_types import TrType
 from ..config import config
 from ..constants import COUNTRY_PT, WARNING
@@ -35,6 +37,10 @@ if TYPE_CHECKING:
 
 # A sent and a received leg are only paired if they fall within this window of each other.
 CONVERSION_WINDOW = timedelta(days=30)
+
+# A pairing looser than either of these is still made, but flagged to stderr for manual review.
+LOW_CONFIDENCE_WINDOW = timedelta(days=7)
+LOW_CONFIDENCE_QUANTITY_DISTANCE = Decimal("0.25")
 
 
 def is_pt() -> bool:
@@ -71,7 +77,10 @@ def merge_conversions(data_files: List["DataFile"]) -> None:
 
     pairs, leftovers = pair_conversion_legs(sent, received)
 
+    low_confidence = 0
     for sent_row, recv_row in pairs:
+        if _emit_pairing_diagnostics(sent_row, recv_row):
+            low_confidence += 1
         _make_conversion_trade(sent_row, recv_row)
 
     for data_row in leftovers:
@@ -83,6 +92,13 @@ def merge_conversions(data_files: List["DataFile"]) -> None:
             f"{WARNING} PT mode: could not pair forced-conversion leg, left unchanged: "
             f"{data_row.t_record}\n"
         )
+
+    summary = f"{Fore.CYAN}PT mode: merged {len(pairs)} forced conversion(s) into Trades"
+    if low_confidence:
+        summary += f" ({low_confidence} low-confidence)"
+    if leftovers:
+        summary += f"; {len(leftovers)} leg(s) left unchanged"
+    sys.stderr.write(f"{summary}\n")
 
 
 def pair_conversion_legs(
@@ -128,6 +144,32 @@ def pair_conversion_legs(
     paired = {id(sent_row) for sent_row, _ in pairs} | used
     leftovers = [dr for dr in sent + received if id(dr) not in paired]
     return pairs, leftovers
+
+
+def _emit_pairing_diagnostics(sent_row: "DataRow", recv_row: "DataRow") -> bool:
+    """Warn on a loose (low-confidence) pairing and return True if it was; else log under debug.
+
+    Must be called before ``_make_conversion_trade`` (which clears the received leg).
+    """
+    sent_rec = sent_row.t_record
+    recv_rec = recv_row.t_record
+    if sent_rec is None or recv_rec is None:
+        return False
+
+    delta = abs(recv_row.timestamp - sent_row.timestamp)
+    qty_dist = _quantity_distance(sent_rec.sell_quantity, recv_rec.buy_quantity)
+    desc = f"{sent_rec.sell_asset} -> {recv_rec.buy_asset}"
+
+    if qty_dist > LOW_CONFIDENCE_QUANTITY_DISTANCE or delta > LOW_CONFIDENCE_WINDOW:
+        sys.stderr.write(
+            f"{WARNING} PT mode: low-confidence conversion pairing "
+            f"({delta.days} day(s) apart, {qty_dist:.0%} quantity difference), review: {desc}\n"
+        )
+        return True
+
+    if config.debug:
+        sys.stderr.write(f"{Fore.CYAN}pt: merged conversion {desc}\n")
+    return False
 
 
 def _quantity_distance(sent_qty: Optional[Decimal], recv_qty: Optional[Decimal]) -> Decimal:
