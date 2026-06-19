@@ -41,6 +41,9 @@ class TransactionOutRecord:  # pylint: disable=too-many-instance-attributes
         self.wallet = wallet
         self.timestamp = timestamp
         self.note = note
+        # Transient marker set by parsers in PT mode (--country PT) to flag a forced-conversion
+        # leg for the pt_mode merge adaptor. Not a CSV/Excel column and never written to output.
+        self.pt_conversion = False
 
     def __str__(self) -> str:
         if self.t_type is TrType.TRADE:

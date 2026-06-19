@@ -24,6 +24,7 @@ The new `price_via_btc` config option may not exist in your config file. If it i
 - Kraken parser: classify Kraken Earn rewards as Staking-Reward rather than Interest.
 - Kraken parser: drop one-sided dust trade rows, and warn-and-skip (instead of erroring) on unknown "transfer"/"earn" subtypes.
 ### Added
+- Data conversion tool: added a `--country` option (`UK` default, or `PT`) which controls how forced token conversions (delisting, migration or redenomination) are classified. In `PT` mode they are emitted as a single crypto-to-crypto Trade (a non-taxable swap with cost-basis carryover under Portuguese CIRS rules) rather than separate Airdrop and Spend legs; the Kraken, Binance and Coinbase parsers are currently supported.
 - Coinbase parser: added "Cash to Savings", "Savings to Cash", "Interest payout" and "Retail Simple Dust" transaction types.
 - Exodus parser: added new export format. ([#467](https://github.com/BittyTax/BittyTax/issues/467))
 - MEXC parser: added new export formats.

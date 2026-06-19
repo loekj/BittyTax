@@ -21,6 +21,7 @@ from ..exceptions import (
     UnexpectedTypeError,
 )
 from ..out_record import TransactionOutRecord
+from ..pt_mode import flag_conversion
 
 if TYPE_CHECKING:
     from ..datarow import DataRow
@@ -459,6 +460,10 @@ def _parse_binance_statements_row(
                 sell_value=Decimal(0),
                 wallet=WALLET,
             )
+        if row_dict["Operation"] == "Token Swap - Redenomination/Rebranding":
+            # PT mode: a token redenomination/rebranding is a non-taxable crypto-to-crypto swap;
+            # flag both legs so pt_mode merges them into one Trade (no-op in UK mode).
+            flag_conversion(data_row)
     elif row_dict["Operation"] == "Super BNB Mining":
         data_row.t_record = TransactionOutRecord(
             TrType.MINING,

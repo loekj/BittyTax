@@ -20,6 +20,7 @@ from ..exceptions import (
     UnexpectedTypeError,
 )
 from ..out_record import TransactionOutRecord
+from ..pt_mode import flag_conversion
 
 if TYPE_CHECKING:
     from ..datarow import DataRow
@@ -351,6 +352,10 @@ def _parse_kraken_ledgers_row(
                     sell_asset=_normalise_asset(row_dict["asset"]),
                     wallet=WALLET,
                 )
+            if row_dict["subtype"] == "delistingconversion":
+                # PT mode: a forced delisting conversion is a non-taxable crypto-to-crypto swap;
+                # flag both legs so pt_mode merges them into one Trade (no-op in UK mode).
+                flag_conversion(data_row)
         elif row_dict["subtype"] == "airdrop":
             data_row.t_record = TransactionOutRecord(
                 TrType.AIRDROP,
@@ -465,6 +470,9 @@ def _parse_kraken_ledgers_row(
                     fee_asset=_normalise_asset(row_dict["asset"]),
                     wallet=WALLET,
                 )
+            if row_dict["subtype"] == "delistingconversion":
+                # PT mode: forced delisting conversion -> non-taxable Trade (no-op in UK mode).
+                flag_conversion(data_row)
             return
         if row_dict["subtype"] not in ("reward", ""):
             sys.stderr.write(

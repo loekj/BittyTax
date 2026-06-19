@@ -17,6 +17,7 @@ from ..dataparser import DataParser, ParserArgs, ParserType
 from ..datarow import TxRawPos
 from ..exceptions import DataRowError, UnexpectedContentError, UnexpectedTypeError
 from ..out_record import TransactionOutRecord
+from ..pt_mode import flag_conversion
 
 if TYPE_CHECKING:
     from ..datarow import DataRow
@@ -497,6 +498,9 @@ def _do_parse_coinbase_row(
                 sell_value=abs(total_ccy) if total_ccy is not None else None,
                 wallet=WALLET,
             )
+        # PT mode: a forced asset migration / Eth2 deprecation is a non-taxable crypto-to-crypto
+        # swap; flag both legs so pt_mode merges them into one Trade (no-op in UK mode).
+        flag_conversion(data_row)
     elif row_dict["Transaction Type"] == "Retail MGX DEX Buy":
         tx_rows = _get_tx_rows(tx_times, data_row.timestamp, (row_dict["Transaction Type"],))
         _make_trade(

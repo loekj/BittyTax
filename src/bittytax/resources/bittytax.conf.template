@@ -10,6 +10,12 @@ local_timezone: 'Europe/London'
 # Date is day first format
 date_is_day_first: True
 
+# Destination tax jurisdiction used by the data conversion tool (bittytax_conv) to classify
+# transactions: 'UK' (default) or 'PT'. In 'PT' mode, forced token conversions (e.g. delisting or
+# redenomination) are emitted as a single crypto-to-crypto Trade instead of separate Airdrop/Spend
+# legs, for use with a Portuguese (CIRS) FIFO tax analyser. Can be overridden with --country.
+country: 'UK'
+
 # Used to differentiate between fiat and cryptoasset transactions, include in here all fiat currencies which are used in your transaction records
 fiat_list:
     ['GBP', 'EUR', 'USD', 'AUD', 'NZD', 'CAD', 'PLN', 'DKK', 'NOK', 'SEK', 'CHF']

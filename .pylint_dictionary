@@ -19,6 +19,7 @@ bidi
 binance
 blockchain
 coinbase
+config
 counterparty
 crypto
 cryptoasset
@@ -40,6 +41,8 @@ openpyxl
 parsers
 powershell
 rebase
+rebranding
+redenomination
 refid
 refids
 repr

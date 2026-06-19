@@ -1,10 +1,13 @@
 import re
 from decimal import Decimal
-from typing import List
+from types import SimpleNamespace
+from typing import Any, List
 
 import requests
 
 from bittytax.bt_types import TrType
+from bittytax.config import config
+from bittytax.conv import pt_mode
 from bittytax.conv.dataparser import DataParser
 from bittytax.conv.datarow import DataRow
 from bittytax.conv.parsers.kraken import (
@@ -350,3 +353,110 @@ def test_trade_mixed_assets_same_side_fails_loudly() -> None:
     )
     assert data_rows[0].t_record is None
     assert data_rows[0].failure is not None
+
+
+# ---------------------------------------------------------------------------
+# Portugal (PT) mode — forced delisting conversions become a single Trade.
+# ---------------------------------------------------------------------------
+
+
+def _parse_pt(rows: List[List[str]]) -> List[DataRow]:
+    parser = DataParser.match_header(LEDGERS_HEADER, 0)
+    assert parser.name == "Kraken Ledgers"
+    data_rows = [DataRow(i + 1, row, parser.in_header, "Kraken L") for i, row in enumerate(rows)]
+    prev = config.config.get("country")
+    config.config["country"] = "PT"
+    try:
+        parse_kraken_ledgers(data_rows, parser)
+        data_files: List[Any] = [SimpleNamespace(data_rows=data_rows)]
+        pt_mode.merge_conversions(data_files)
+    finally:
+        config.config["country"] = prev
+    return data_rows
+
+
+def test_pt_transfer_delisting_becomes_trade() -> None:
+    data_rows = _parse_pt(
+        [
+            _ledger_row("L1", "R1", "transfer", "delistingconversion", "USDT", "-110.39461455"),
+            _ledger_row("L2", "R2", "transfer", "delistingconversion", "USDC", "110.36149621"),
+        ]
+    )
+
+    trade = data_rows[0].t_record
+    assert trade is not None
+    assert trade.t_type == TrType.TRADE
+    assert trade.sell_quantity == Decimal("110.39461455")
+    assert trade.sell_asset == "USDT"
+    assert trade.buy_quantity == Decimal("110.36149621")
+    assert trade.buy_asset == "USDC"
+    assert trade.note == "Delisting conversion"
+    assert data_rows[1].t_record is None  # received leg folded into the Trade
+
+
+def test_pt_earn_delisting_becomes_trade() -> None:
+    data_rows = _parse_pt(
+        [
+            _ledger_row("L1", "R1", "earn", "delistingconversion", "MATIC", "-17.04112"),
+            _ledger_row("L2", "R2", "earn", "delistingconversion", "POL", "17.041127"),
+        ]
+    )
+
+    trade = data_rows[0].t_record
+    assert trade is not None
+    assert trade.t_type == TrType.TRADE
+    assert trade.sell_asset == "MATIC"
+    assert trade.buy_asset == "POL"
+    assert data_rows[1].t_record is None
+
+
+def test_pt_unpaired_delisting_falls_back_to_spend() -> None:
+    data_rows = _parse_pt(
+        [_ledger_row("L1", "R1", "transfer", "delistingconversion", "USDT", "-110.39461455")]
+    )
+
+    spend = data_rows[0].t_record
+    assert spend is not None
+    assert spend.t_type == TrType.SPEND  # left as the original disposal
+    assert spend.pt_conversion is False  # flag cleared
+    assert data_rows[0].failure is None
+
+
+def test_pt_genuine_airdrop_not_merged() -> None:
+    # A genuine airdrop and an unrelated staking disposal are not flagged, so PT mode must leave
+    # them untouched (no spurious Trade).
+    data_rows = _parse_pt(
+        [
+            _ledger_row("L1", "R1", "transfer", "airdrop", "OP", "100.0"),
+            _ledger_row("L2", "R2", "staking", "", "DOT", "-1.0"),
+        ]
+    )
+
+    airdrop = data_rows[0].t_record
+    assert airdrop is not None
+    assert airdrop.t_type == TrType.AIRDROP
+
+    spend = data_rows[1].t_record
+    assert spend is not None
+    assert spend.t_type == TrType.SPEND
+
+
+def test_uk_delisting_not_flagged() -> None:
+    # Regression: in the default UK mode the delisting legs stay as separate Airdrop/Spend and are
+    # never flagged for conversion.
+    data_rows = _parse(
+        [
+            _ledger_row("L1", "R1", "transfer", "delistingconversion", "USDT", "-110.39461455"),
+            _ledger_row("L2", "R2", "transfer", "delistingconversion", "USDC", "110.36149621"),
+        ]
+    )
+
+    sent = data_rows[0].t_record
+    assert sent is not None
+    assert sent.t_type == TrType.SPEND
+    assert sent.pt_conversion is False
+
+    received = data_rows[1].t_record
+    assert received is not None
+    assert received.t_type == TrType.AIRDROP
+    assert received.pt_conversion is False

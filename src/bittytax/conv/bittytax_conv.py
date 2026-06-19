@@ -18,6 +18,8 @@ from ..constants import (
     CONV_FORMAT_CSV,
     CONV_FORMAT_EXCEL,
     CONV_FORMAT_RECAP,
+    COUNTRY_PT,
+    COUNTRY_UK,
     TERMINAL_POWERSHELL_GUI,
 )
 from ..utils import is_compiled
@@ -36,6 +38,7 @@ from .mergers import *  # pylint: disable=wildcard-import, unused-wildcard-impor
 from .output_csv import OutputCsv
 from .output_excel import OutputExcel
 from .parsers import *  # type: ignore[no-redef] # pylint: disable=wildcard-import, unused-wildcard-import # noqa: E501
+from .pt_mode import is_pt, merge_conversions
 
 if sys.stderr.encoding != "UTF-8":
     sys.stderr.reconfigure(encoding="utf-8")  # type: ignore[union-attr]
@@ -78,6 +81,13 @@ def main() -> None:
         help="specify a cryptoasset symbol, if it cannot be identified automatically",
     )
     parser.add_argument(
+        "--country",
+        choices=[COUNTRY_UK, COUNTRY_PT],
+        default=COUNTRY_UK,
+        type=str.upper,
+        help=f"destination tax jurisdiction for transaction classification, default: {COUNTRY_UK}",
+    )
+    parser.add_argument(
         "--binance_statements_only",
         action="store_true",
         help="use only Binance Statements, for ALL transaction types, "
@@ -116,6 +126,7 @@ def main() -> None:
 
     args = parser.parse_args()
     config.debug = args.debug
+    config.config["country"] = args.country
     DataFile.remove_duplicates = args.duplicates
 
     if args.binance_statements_only:
@@ -179,6 +190,9 @@ def main() -> None:
 
     if DataFile.data_files:
         DataMerge.match_merge(DataFile.data_files)
+
+        if is_pt():
+            merge_conversions(DataFile.data_files_ordered)
 
         if args.format == CONV_FORMAT_EXCEL:
             is_macos = platform.system() == "Darwin"

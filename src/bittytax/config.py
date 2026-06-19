@@ -9,7 +9,7 @@ from typing import Any, TextIO
 import yaml
 from colorama import Fore
 
-from .constants import BITTYTAX_PATH, ERROR
+from .constants import BITTYTAX_PATH, COUNTRY_UK, ERROR
 
 if sys.version_info < (3, 9):
     import importlib_resources as pkg_resources
@@ -40,6 +40,7 @@ class Config:
         "local_currency": "GBP",
         "local_timezone": "Europe/London",
         "date_is_day_first": True,
+        "country": COUNTRY_UK,
         "fiat_list": FIAT_LIST,
         "crypto_list": CRYPTO_LIST,
         "trade_asset_type": TRADE_ASSET_TYPE_PRIORITY,
