@@ -34,6 +34,7 @@ guestimate
 hotbit
 i
 json
+koinly
 kraken
 lookups
 nano
@@ -53,8 +54,10 @@ timestamp
 timezone
 tradeable
 txhash
+unmapped
 unpriceable
 unstake
+untagged
 url
 xlsx
 xlsxwriter
