@@ -88,6 +88,12 @@ def main() -> None:
         help=f"destination tax jurisdiction for transaction classification, default: {COUNTRY_UK}",
     )
     parser.add_argument(
+        "--venue",
+        type=str,
+        help="name of the exchange/wallet/platform the file is from (e.g. 'KuCoin', 'Koinly'); "
+        "when given, header matching is scoped to that venue and tolerates added/changed columns",
+    )
+    parser.add_argument(
         "--binance_statements_only",
         action="store_true",
         help="use only Binance Statements, for ALL transaction types, "
@@ -127,6 +133,7 @@ def main() -> None:
     args = parser.parse_args()
     config.debug = args.debug
     config.config["country"] = args.country
+    config.config["venue"] = args.venue
     DataFile.remove_duplicates = args.duplicates
 
     if args.binance_statements_only:

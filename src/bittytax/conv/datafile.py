@@ -31,8 +31,16 @@ class DataFile:
 
     def __init__(self, parser: DataParser, reader: Iterator[List[str]]) -> None:
         self.parser = copy.copy(parser)
+        # projection is set only by venue-scoped matching of a positional export (E2); when None
+        # (every global / name-based match) rows pass through unchanged — identical to before.
+        projection = parser.projection
         self.data_rows = [
-            DataRow(line_num + 1, row, parser.in_header, parser.worksheet_name)
+            DataRow(
+                line_num + 1,
+                ([row[i] if i < len(row) else "" for i in projection] if projection else row),
+                parser.in_header,
+                parser.worksheet_name,
+            )
             for line_num, row in enumerate(reader)
         ]
         self.failures: List[DataRow] = []
@@ -335,7 +343,7 @@ class DataFile:
         # Header might not be on first line
         for row in range(14):
             try:
-                parser = DataParser.match_header(next(reader), row)
+                parser = DataParser.match_header(next(reader), row, config.venue)
             except KeyError:
                 continue
             except StopIteration:

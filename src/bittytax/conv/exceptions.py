@@ -37,6 +37,14 @@ class UnexpectedTradingPairError(DataRowError):
         return f"Unrecognised trading pair for {self.col_name}: '{self.value}'"
 
 
+class MissingColumnError(DataRowError):
+    # Raised when a row handler reads a column (via row_dict["..."]) that is absent from the file
+    # header. Previously this surfaced as an uncaught KeyError that aborted the whole conversion;
+    # as a DataRowError it is caught by DataRow.parse() and recorded as a single failed row.
+    def __str__(self) -> str:
+        return f"Missing column '{self.col_name}'"
+
+
 class DataParserError(Exception):
     def __init__(self, filename: str, worksheet: str = "") -> None:
         super().__init__()

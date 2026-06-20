@@ -5,7 +5,7 @@ import sys
 from datetime import datetime, tzinfo
 from decimal import Decimal
 from enum import Enum, auto
-from typing import TYPE_CHECKING, Any, Callable, Dict, List, Optional, Union
+from typing import TYPE_CHECKING, Any, Callable, Dict, List, Optional, Tuple, Union
 
 import dateutil.parser
 import dateutil.tz
@@ -16,6 +16,7 @@ from ..bt_types import AssetSymbol, Timestamp
 from ..config import config
 from ..constants import TZ_UTC
 from ..price.pricedata import PriceData
+from . import venue_mode
 from .exceptions import CurrencyConversionError
 
 if TYPE_CHECKING:
@@ -121,6 +122,9 @@ class DataParser:  # pylint: disable=too-many-instance-attributes
         self.in_header = [col if col and not callable(col) else "" for col in self.header]
         self.in_header_row_num = 1
         self.newest_first = newest_first
+        # Set only by venue-scoped projection (E2): file-column indices in declared order, used to
+        # realign a drifted positional export. None for every normal (global / name-based) match.
+        self.projection: Optional[List[int]] = None
 
         self.parsers.append(self)
 
@@ -215,16 +219,25 @@ class DataParser:  # pylint: disable=too-many-instance-attributes
         raise CurrencyConversionError(from_currency, config.ccy, timestamp)
 
     @classmethod
-    def match_header(cls, row: List[str], row_num: int) -> "DataParser":
+    def match_header(
+        cls, row: List[str], row_num: int, venue: Optional[str] = None
+    ) -> "DataParser":
         row = [col.replace("\n", "").strip() for col in row]
         if config.debug:
             sys.stderr.write(
                 f"{Fore.YELLOW}header: row[{row_num + 1}] TRY: {cls._format_row(row)}\n"
             )
 
-        parser = cls._match_fixed_header(row, row_num)
+        # Additive venue-scoped pass: runs ONLY when a venue is given, and on any miss falls through
+        # to the unchanged global matchers below. So venue=None executes identical code to before.
+        parser = cls._match_scoped(row, row_num, venue) if venue else None
         if not parser:
-            parser = cls._match_dynamic_header(row, row_num)
+            parser = cls._match_fixed_header(row, row_num)
+            if not parser:
+                parser = cls._match_dynamic_header(row, row_num)
+            if parser is not None:
+                # global path never projects; clear any stale projection left on this singleton
+                parser.projection = None
 
         if parser:
             if config.debug:
@@ -234,6 +247,58 @@ class DataParser:  # pylint: disable=too-many-instance-attributes
                 )
             return parser
         raise KeyError
+
+    @classmethod
+    def _match_scoped(cls, row: List[str], row_num: int, venue: str) -> Optional["DataParser"]:
+        # Scoped, order-agnostic, drift-tolerant matching, used only when the venue is known.
+        # Picks the most specific eligible parser within the venue; on genuine ambiguity it returns
+        # None so match_header falls back to the global matchers, rather than guessing.
+        candidates = venue_mode.scope_candidates(cls.parsers, venue)
+        if not candidates:
+            if config.debug:
+                sys.stderr.write(
+                    f"{Fore.BLUE}header: venue '{venue}' matched no parser group; "
+                    f"falling back to global matching\n"
+                )
+            return None
+
+        header_set = frozenset(row)
+        # each entry: (matched_count, parser, ScanResult, projection|None) in registration order
+        eligible: List[Tuple[int, "DataParser", venue_mode.ScanResult, Optional[List[int]]]] = []
+        for parser in candidates:
+            positional = venue_mode.is_positional(parser)
+            if positional and not venue_mode.is_projectable(parser):
+                continue  # strict positional (e.g. Coinbase) -> leave to exact matching
+            result = venue_mode.scan(parser, row)
+            if result.ambiguous or result.declared_count == 0:
+                continue
+            if positional:
+                projection = venue_mode.build_projection(result)
+                if projection is not None:
+                    eligible.append((result.matched_count, parser, result, projection))
+            elif venue_mode.is_eligible(parser, result, header_set):
+                eligible.append((result.matched_count, parser, result, None))
+
+        if not eligible:
+            return None
+
+        # Most declared columns matched = most specific format; stable sort keeps registration order
+        # within ties. An exact top-tie is genuine ambiguity -> refuse (fall back).
+        eligible.sort(key=lambda e: -e[0])
+        if len(eligible) > 1 and eligible[0][0] == eligible[1][0]:
+            if config.debug:
+                sys.stderr.write(
+                    f"{Fore.BLUE}header: row[{row_num + 1}] "
+                    f"SCOPED AMBIGUOUS for venue '{venue}', falling back\n"
+                )
+            return None
+
+        _, parser, result, projection = eligible[0]
+        parser.args = list(result.args)
+        parser.projection = projection
+        parser.in_header = [row[i] for i in projection] if projection is not None else list(row)
+        parser.in_header_row_num = row_num + 1
+        return parser
 
     @classmethod
     def _match_fixed_header(cls, row: List[str], row_num: int) -> Optional["DataParser"]:
@@ -306,6 +371,13 @@ class DataParser:  # pylint: disable=too-many-instance-attributes
                 )
 
         return None
+
+    @classmethod
+    def venues(cls) -> List[str]:
+        # Distinct parser names, so callers (e.g. tytle) can align their venue vocabulary with what
+        # --venue scopes to: a venue string scopes to a parser when the parser name starts with it
+        # (case/punctuation-insensitive), so "KuCoin" covers "KuCoin Trades", "KuCoin Deposits".
+        return sorted({parser.name for parser in cls.parsers})
 
     @classmethod
     def format_parsers(cls) -> str:

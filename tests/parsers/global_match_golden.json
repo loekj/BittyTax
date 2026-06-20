@@ -1,0 +1,5285 @@
+[
+ {
+  "header": [
+   "timeExecuted",
+   "type",
+   "boughtQuantity",
+   "boughtCurrency",
+   "boughtCurrencyId",
+   "soldQuantity",
+   "soldCurrency",
+   "soldCurrencyId",
+   "feeQuantity",
+   "feeCurrency",
+   "feeCurrencyId",
+   "classification",
+   "walletName",
+   "walletProvider",
+   "providerId",
+   "txId",
+   "primaryAddress",
+   "otherAddress",
+   "temporaryCurrencyName",
+   "temporaryFeeCurrencyName",
+   "temporaryBoughtCurrencyTicker",
+   "temporarySoldCurrencyTicker",
+   "temporaryFeeCurrencyTicker",
+   "id",
+   "associatedTransferId",
+   "comments",
+   "fiatValueOverwrite",
+   "feeFiatValueOverwrite"
+  ],
+  "name": "Accointing",
+  "idx": 0
+ },
+ {
+  "header": [
+   "timeExecuted",
+   "type",
+   "boughtQuantity",
+   "boughtCurrency",
+   "boughtCurrencyId",
+   "soldQuantity",
+   "soldCurrency",
+   "soldCurrencyId",
+   "feeQuantity",
+   "feeCurrency",
+   "feeCurrencyId",
+   "classification",
+   "walletName",
+   "walletProvider",
+   "providerId",
+   "txId",
+   "primaryAddress",
+   "otherAddress",
+   "temporaryCurrencyName",
+   "temporaryFeeCurrencyName",
+   "temporaryBoughtCurrencyTicker",
+   "temporarySoldCurrencyTicker",
+   "temporaryFeeCurrencyTicker",
+   "id",
+   "associatedTransferId",
+   "comments"
+  ],
+  "name": "Accointing",
+  "idx": 1
+ },
+ {
+  "header": [
+   "timeExecuted",
+   "type",
+   "boughtQuantity",
+   "boughtCurrency",
+   "boughtCurrencyId",
+   "soldQuantity",
+   "soldCurrency",
+   "soldCurrencyId",
+   "feeQuantity",
+   "feeCurrency",
+   "feeCurrencyId",
+   "classification",
+   "walletName",
+   "walletProvider",
+   "txId",
+   "primaryAddress",
+   "otherAddress",
+   "temporaryCurrencyName",
+   "temporaryFeeCurrencyName",
+   "temporaryBoughtCurrencyTicker",
+   "temporarySoldCurrencyTicker",
+   "temporaryFeeCurrencyTicker",
+   "id",
+   "associatedTransferId",
+   "comments"
+  ],
+  "name": "Accointing",
+  "idx": 2
+ },
+ {
+  "header": [
+   "Date",
+   "Transaction ID",
+   "Type",
+   "Received from (disclaimer: may not be accurate - first sender address only)",
+   "Received amount",
+   "Received currency",
+   "Sent amount",
+   "Sent currency",
+   "Fee amount",
+   "Fee currency"
+  ],
+  "name": "AdaLite",
+  "idx": 3
+ },
+ {
+  "header": [
+   "Date",
+   "Transaction ID",
+   "Type",
+   "Received amount",
+   "Received currency",
+   "Sent amount",
+   "Sent currency",
+   "Fee amount",
+   "Fee currency"
+  ],
+  "name": "AdaLite",
+  "idx": 4
+ },
+ {
+  "header": [
+   "Version",
+   "Block",
+   "Time",
+   "From",
+   "To",
+   "Function",
+   "Fee",
+   "Success"
+  ],
+  "name": "Aptoscan (Transactions)",
+  "idx": 5
+ },
+ {
+  "header": [
+   "Version",
+   "Block",
+   "Time",
+   "Coin_Type",
+   "From",
+   "To",
+   "Amount",
+   "Fee",
+   "Success"
+  ],
+  "name": "Aptoscan (Coin Transfers)",
+  "idx": 6
+ },
+ {
+  "header": [
+   "Version",
+   "Block",
+   "Time",
+   "Token",
+   "Token_Version",
+   "From",
+   "To",
+   "Amount",
+   "Fee",
+   "Success"
+  ],
+  "name": "Aptoscan (Token Transfers)",
+  "idx": 7
+ },
+ {
+  "header": [
+   "Investment",
+   "Date",
+   "Order Status",
+   "Account",
+   "Buy/Sell",
+   "Quantity",
+   "Cost/Proceeds"
+  ],
+  "name": "Barclays Smart Investor",
+  "idx": 8
+ },
+ {
+  "header": [
+   "Date(UTC)",
+   "Market",
+   "Type",
+   "Price",
+   "Amount",
+   "Total",
+   "Fee",
+   "Fee Coin"
+  ],
+  "name": "Binance Trades",
+  "idx": 9
+ },
+ {
+  "header": [
+   "Date",
+   "Pair",
+   "Type",
+   "Sell",
+   "Buy",
+   "Price",
+   "Inverse Price",
+   "Date Updated",
+   "Status"
+  ],
+  "name": "Binance Trades",
+  "idx": 10
+ },
+ {
+  "header": [
+   "Date",
+   "Wallet",
+   "Pair",
+   "Type",
+   "Sell",
+   "Buy",
+   "Price",
+   "Inverse Price",
+   "Date Updated",
+   "Status"
+  ],
+  "name": "Binance Trades",
+  "idx": 11
+ },
+ {
+  "header": [
+   "Date(UTC)",
+   "Pair",
+   "Side",
+   "Price",
+   "Executed",
+   "Amount",
+   "Fee"
+  ],
+  "name": "Binance Trades",
+  "idx": 12
+ },
+ {
+  "header": [
+   "Date(UTC+0)",
+   "Coin",
+   "Network",
+   "Amount",
+   "Address",
+   "TXID",
+   "Status"
+  ],
+  "name": "Binance Deposits",
+  "idx": 13
+ },
+ {
+  "header": [
+   "Date(UTC+0)",
+   "Coin",
+   "Network",
+   "Amount",
+   "Fee",
+   "Address",
+   "TXID",
+   "Status"
+  ],
+  "name": "Binance Withdrawals",
+  "idx": 14
+ },
+ {
+  "header": [
+   "Date(UTC)",
+   "Coin",
+   "Network",
+   "Amount",
+   "TransactionFee",
+   "Address",
+   "TXID",
+   "SourceAddress",
+   "PaymentID",
+   "Status"
+  ],
+  "name": "Binance Deposits/Withdrawals",
+  "idx": 15
+ },
+ {
+  "header": [
+   "Date(UTC)",
+   "Coin",
+   "Amount",
+   "TransactionFee",
+   "Address",
+   "TXID",
+   "SourceAddress",
+   "PaymentID",
+   "Status"
+  ],
+  "name": "Binance Deposits/Withdrawals",
+  "idx": 16
+ },
+ {
+  "header": [
+   "Date",
+   "Coin",
+   "Amount",
+   "TransactionFee",
+   "Address",
+   "TXID",
+   "SourceAddress",
+   "PaymentID",
+   "Status"
+  ],
+  "name": "Binance Deposits/Withdrawals",
+  "idx": 17
+ },
+ {
+  "header": [
+   "",
+   "Coin",
+   "Amount",
+   "Status",
+   "Payment Method",
+   "Indicated Amount",
+   "Fee",
+   "Order ID"
+  ],
+  "name": null,
+  "idx": -1
+ },
+ {
+  "header": [
+   "User_ID",
+   "UTC_Time",
+   "Account",
+   "Operation",
+   "Coin",
+   "Change",
+   "Remark"
+  ],
+  "name": "Binance Statements",
+  "idx": 19
+ },
+ {
+  "header": [
+   "UTC_Time",
+   "Account",
+   "Operation",
+   "Coin",
+   "Change",
+   "Remark"
+  ],
+  "name": "Binance Statements",
+  "idx": 20
+ },
+ {
+  "header": [
+   "Date(UTC)",
+   "type",
+   "Amount",
+   "Asset",
+   "Symbol",
+   "Transaction ID"
+  ],
+  "name": "Binance Futures",
+  "idx": 21
+ },
+ {
+  "header": [
+   "User ID",
+   "Time",
+   "Category",
+   "Operation",
+   "Order ID",
+   "Transaction ID",
+   "Primary Asset",
+   "Realized Amount For Primary Asset",
+   "Realized Amount for Primary Asset in USD",
+   "Base Asset",
+   "Realized Amount For Base Asset",
+   "Realized Amount For Base Asset In USD",
+   "Quote Asset",
+   "Realized Amount for Quote Asset",
+   "Realized Amount for Quote Asset in USD",
+   "Fee Asset",
+   "Realized Amount for Fee Asset",
+   "Realized Amount for Fee Asset in USD",
+   "Payment Method",
+   "Withdraw Method",
+   "Additional Note"
+  ],
+  "name": "Binance.US",
+  "idx": 22
+ },
+ {
+  "header": [
+   "User_Id",
+   "Time",
+   "Category",
+   "Operation",
+   "Order_Id",
+   "Transaction_Id",
+   "Primary_Asset",
+   "Realized_Amount_For_Primary_Asset",
+   "Realized_Amount_For_Primary_Asset_In_USD_Value",
+   "Base_Asset",
+   "Realized_Amount_For_Base_Asset",
+   "Realized_Amount_For_Base_Asset_In_USD_Value",
+   "Quote_Asset",
+   "Realized_Amount_For_Quote_Asset",
+   "Realized_Amount_For_Quote_Asset_In_USD_Value",
+   "Fee_Asset",
+   "Realized_Amount_For_Fee_Asset",
+   "Realized_Amount_For_Fee_Asset_In_USD_Value",
+   "Payment_Method",
+   "Withdrawal_Method",
+   "Additional_Note"
+  ],
+  "name": "Binance.US",
+  "idx": 23
+ },
+ {
+  "header": [
+   "Date",
+   "Action",
+   "Symbol",
+   "Account",
+   "Volume",
+   "Price",
+   "Currency",
+   "Fee",
+   "FeeCurrency",
+   "Total",
+   "Cost/Proceeds",
+   "ExchangeId",
+   "Category",
+   "Subaccount",
+   "Memo",
+   "SymbolBalance",
+   "CurrencyBalance",
+   "FeeBalance"
+  ],
+  "name": "BitcoinTaxes Trades",
+  "idx": 24
+ },
+ {
+  "header": [
+   "Date",
+   "Action",
+   "Symbol",
+   "Account",
+   "Volume",
+   "Price",
+   "Currency",
+   "Fee",
+   "FeeCurrency",
+   "Total",
+   "Ref",
+   "Memo",
+   "Margin",
+   "MarginId",
+   "TxHash",
+   "Sender",
+   "Recipient"
+  ],
+  "name": "BitcoinTaxes Spending/Income",
+  "idx": 25
+ },
+ {
+  "header": [
+   "Date",
+   "Action",
+   "Symbol",
+   "Account",
+   "Volume",
+   "Price",
+   "Currency",
+   "Fee",
+   "FeeCurrency",
+   "Total",
+   "Ref",
+   "Memo",
+   "Margin",
+   "MarginId",
+   "TxHash",
+   "Sender",
+   "Recipient",
+   "SymbolBalance"
+  ],
+  "name": "BitcoinTaxes Spending/Income",
+  "idx": 26
+ },
+ {
+  "header": [
+   "#",
+   "PAIR",
+   "AMOUNT",
+   "PRICE",
+   "FEE",
+   "FEE PERC",
+   "FEE CURRENCY",
+   "DATE",
+   "ORDER ID"
+  ],
+  "name": "Bitfinex Trades",
+  "idx": 27
+ },
+ {
+  "header": [
+   "#",
+   "PAIR",
+   "AMOUNT",
+   "PRICE",
+   "FEE",
+   "FEE CURRENCY",
+   "DATE",
+   "ORDER ID"
+  ],
+  "name": "Bitfinex Trades",
+  "idx": 28
+ },
+ {
+  "header": [
+   "#",
+   "STARTED",
+   "UPDATED",
+   "CURRENCY",
+   "STATUS",
+   "AMOUNT",
+   "FEES",
+   "DESCRIPTION",
+   "TRANSACTION ID",
+   "NOTE"
+  ],
+  "name": "Bitfinex Deposits/Withdrawals",
+  "idx": 29
+ },
+ {
+  "header": [
+   "#",
+   "DATE",
+   "CURRENCY",
+   "STATUS",
+   "AMOUNT",
+   "FEES",
+   "DESCRIPTION",
+   "TRANSACTION ID",
+   "NOTE"
+  ],
+  "name": "Bitfinex Deposits/Withdrawals",
+  "idx": 30
+ },
+ {
+  "header": [
+   "#",
+   "DATE",
+   "CURRENCY",
+   "STATUS",
+   "AMOUNT",
+   "FEES",
+   "DESCRIPTION",
+   "TRANSACTION ID"
+  ],
+  "name": "Bitfinex Deposits/Withdrawals",
+  "idx": 31
+ },
+ {
+  "header": [
+   "#",
+   "DESCRIPTION",
+   "CURRENCY",
+   "AMOUNT",
+   "BALANCE",
+   "DATE",
+   "WALLET"
+  ],
+  "name": "Bitfinex Ledger",
+  "idx": 32
+ },
+ {
+  "header": [
+   "DESCRIPTION",
+   "CURRENCY",
+   "AMOUNT",
+   "BALANCE",
+   "DATE",
+   "WALLET"
+  ],
+  "name": "Bitfinex Ledger",
+  "idx": 33
+ },
+ {
+  "header": [
+   "Transaction ID",
+   "Timestamp",
+   "Transaction Type",
+   "In/Out",
+   "Amount Fiat",
+   "Fiat",
+   "Amount Asset",
+   "Asset",
+   "Asset market price",
+   "Asset market price currency",
+   "Asset class",
+   "Product ID",
+   "Fee",
+   "Fee asset",
+   "Spread",
+   "Spread Currency",
+   "Tax Fiat"
+  ],
+  "name": "Bitpanda",
+  "idx": 34
+ },
+ {
+  "header": [
+   "ID",
+   "Type",
+   "In/Out",
+   "Amount Fiat",
+   "Fee",
+   "Fiat",
+   "Amount Asset",
+   "Asset",
+   "Status",
+   "Created at"
+  ],
+  "name": "Bitpanda",
+  "idx": 35
+ },
+ {
+  "header": [
+   "ID",
+   "Account",
+   "Type",
+   "Subtype",
+   "Datetime",
+   "Amount",
+   "Amount currency",
+   "Value",
+   "Value currency",
+   "Rate",
+   "Rate currency",
+   "Fee",
+   "Fee currency",
+   "Order ID"
+  ],
+  "name": "Bitstamp",
+  "idx": 36
+ },
+ {
+  "header": [
+   "Type",
+   "Datetime",
+   "Account",
+   "Amount",
+   "Value",
+   "Rate",
+   "Fee",
+   "Sub Type"
+  ],
+  "name": "Bitstamp",
+  "idx": 37
+ },
+ {
+  "header": [
+   "TXID",
+   "Time (UTC)",
+   "Transaction",
+   "Order Type",
+   "Market",
+   "Base",
+   "Quote",
+   "Price",
+   "Quantity (Base)",
+   "Fees (Quote)",
+   "Total (Quote)",
+   "Approx Value (USD)",
+   "Time In Force",
+   "Notes"
+  ],
+  "name": "Bittrex Trades",
+  "idx": 38
+ },
+ {
+  "header": [
+   "Date",
+   "Market",
+   "Side",
+   "Type",
+   "Price",
+   "Quantity",
+   "Total"
+  ],
+  "name": "Bittrex Trades",
+  "idx": 39
+ },
+ {
+  "header": [
+   "Uuid",
+   "Exchange",
+   "Closed (UTC)",
+   "Opened (UTC)",
+   "Type",
+   "Time In Force",
+   "Bid/Ask",
+   "Quantity",
+   "Remaining",
+   "Price",
+   "Avg. Price per Share"
+  ],
+  "name": "Bittrex Trades",
+  "idx": 40
+ },
+ {
+  "header": [
+   "Uuid",
+   "Exchange",
+   "TimeStamp",
+   "OrderType",
+   "Limit",
+   "Quantity",
+   "QuantityRemaining",
+   "Commission",
+   "Price",
+   "PricePerUnit",
+   "IsConditional",
+   "Condition",
+   "ConditionTarget",
+   "ImmediateOrCancel",
+   "Closed",
+   "TimeInForceTypeId",
+   "TimeInForce"
+  ],
+  "name": "Bittrex Trades",
+  "idx": 41
+ },
+ {
+  "header": [
+   "Uuid",
+   "Exchange",
+   "TimeStamp",
+   "OrderType",
+   "Limit",
+   "Quantity",
+   "QuantityRemaining",
+   "Commission",
+   "Price",
+   "PricePerUnit",
+   "IsConditional",
+   "Condition",
+   "ConditionTarget",
+   "ImmediateOrCancel",
+   "Closed"
+  ],
+  "name": "Bittrex Trades",
+  "idx": 42
+ },
+ {
+  "header": [
+   "OrderUuid",
+   "Exchange",
+   "Type",
+   "Quantity",
+   "Limit",
+   "CommissionPaid",
+   "Price",
+   "Opened",
+   "Closed"
+  ],
+  "name": "Bittrex Trades",
+  "idx": 43
+ },
+ {
+  "header": [
+   "Date",
+   "Currency",
+   "Type",
+   "Address",
+   "Memo/Tag",
+   "TxId",
+   "Amount"
+  ],
+  "name": "Bittrex Deposits/Withdrawals",
+  "idx": 44
+ },
+ {
+  "header": [
+   "Id",
+   "Currency",
+   "Amount",
+   "Confirmations",
+   "LastUpdatedDate",
+   "TxId",
+   "CryptoAddress",
+   "Source",
+   "PropertyBagError",
+   "BankInfo",
+   "DepositUuid",
+   "State"
+  ],
+  "name": "Bittrex Deposits",
+  "idx": 45
+ },
+ {
+  "header": [
+   "Id",
+   "Currency",
+   "Amount",
+   "Confirmations",
+   "LastUpdatedDate",
+   "TxId",
+   "CryptoAddress",
+   "Source"
+  ],
+  "name": "Bittrex Deposits",
+  "idx": 46
+ },
+ {
+  "header": [
+   "Id",
+   "Currency",
+   "Amount",
+   "Confirmations",
+   "LastUpdatedDate",
+   "TxId",
+   "CryptoAddress"
+  ],
+  "name": "Bittrex Deposits",
+  "idx": 47
+ },
+ {
+  "header": [
+   "Id",
+   "Amount",
+   "Currency",
+   "Confirmations",
+   "LastUpdated",
+   "TxId",
+   "CryptoAddress"
+  ],
+  "name": "Bittrex Deposits",
+  "idx": 48
+ },
+ {
+  "header": [
+   "PaymentUuid",
+   "Currency",
+   "Amount",
+   "Address",
+   "OpenedDate",
+   "Authorized",
+   "Pending",
+   "TxId",
+   "TxFee",
+   "Target",
+   "BankInfo",
+   "Canceled"
+  ],
+  "name": "Bittrex Withdrawals",
+  "idx": 49
+ },
+ {
+  "header": [
+   "PaymentUuid",
+   "Currency",
+   "Amount",
+   "Address",
+   "OpenedDate",
+   "Authorized",
+   "Pending",
+   "TxFee",
+   "Canceled",
+   "TxId"
+  ],
+  "name": "Bittrex Withdrawals",
+  "idx": 50
+ },
+ {
+  "header": [
+   "PaymentUuid",
+   "Currency",
+   "Amount",
+   "Address",
+   "Opened",
+   "Authorized",
+   "PendingPayment",
+   "TxCost",
+   "TxId",
+   "Canceled",
+   "InvalidAddress"
+  ],
+  "name": "Bittrex Withdrawals",
+  "idx": 51
+ },
+ {
+  "header": [
+   "reference",
+   "direction",
+   "status",
+   "coin",
+   "coinAmount",
+   "fiatCurrency",
+   "fiatCurrencyAmount",
+   "startedTime",
+   "endedTime",
+   "transactionID",
+   "coinAddress"
+  ],
+  "name": "Bittylicious",
+  "idx": 52
+ },
+ {
+  "header": [
+   "date_time_utc",
+   "transaction_type",
+   "asset",
+   "quantity_transacted",
+   "counter_asset",
+   "counter_amount",
+   "fee_asset",
+   "fee_amount",
+   "Notes",
+   "transaction_id",
+   "transaction_hash"
+  ],
+  "name": "Blockchain.com",
+  "idx": 53
+ },
+ {
+  "header": [
+   "date",
+   "time",
+   "token",
+   "type",
+   "amount",
+   "value_then",
+   "value_now",
+   "exchange_rate_then",
+   "tx",
+   "note",
+   "fee_value",
+   "fee_value_then",
+   "recipient_received",
+   "recipient_value_then",
+   "value_then_raw",
+   "value_now_raw",
+   "exchange_rate_then_raw"
+  ],
+  "name": "Blockchain.com",
+  "idx": 54
+ },
+ {
+  "header": [
+   "date",
+   "time",
+   "token",
+   "type",
+   "amount",
+   "value_then",
+   "value_now",
+   "exchange_rate_then",
+   "tx",
+   "note"
+  ],
+  "name": "Blockchain.com",
+  "idx": 55
+ },
+ {
+  "header": [
+   "date",
+   "time",
+   "type",
+   "amount_btc",
+   "value_then",
+   "value_now",
+   "exchange_rate_then",
+   "tx",
+   "note"
+  ],
+  "name": "Blockchain.com",
+  "idx": 56
+ },
+ {
+  "header": [
+   "date_time_utc",
+   "transaction_type",
+   "asset",
+   "quantity_transacted",
+   "counter_asset",
+   "counter_amount",
+   "price",
+   "fee_asset",
+   "fee_amount",
+   "order_id",
+   "transaction_id",
+   "tx_hash"
+  ],
+  "name": "Blockchain.com Exchange",
+  "idx": 57
+ },
+ {
+  "header": [
+   "Cryptocurrency",
+   "Amount",
+   "Transaction Type",
+   "Exchange Rate Per Coin (USD)",
+   "Confirmed At"
+  ],
+  "name": "BlockFi",
+  "idx": 58
+ },
+ {
+  "header": [
+   "Cryptocurrency",
+   "Amount",
+   "Transaction Type",
+   "Confirmed At"
+  ],
+  "name": "BlockFi",
+  "idx": 59
+ },
+ {
+  "header": [
+   "Trade ID",
+   "Date",
+   "Buy Quantity",
+   "Buy Currency",
+   "Sold Quantity",
+   "Sold Currency",
+   "Rate Amount",
+   "Rate Currency",
+   "Type",
+   "Frequency",
+   "Destination"
+  ],
+  "name": "BlockFi Trades",
+  "idx": 60
+ },
+ {
+  "header": [
+   "Trade ID",
+   "Date",
+   "Buy Quantity",
+   "Buy Currency",
+   "Sold Quantity",
+   "Sold Currency",
+   "Rate Amount",
+   "Rate Currency",
+   "Type"
+  ],
+  "name": "BlockFi Trades",
+  "idx": 61
+ },
+ {
+  "header": [
+   "Date (UTC)",
+   "Integration Name",
+   "Label",
+   "Outgoing Asset",
+   "Outgoing Amount",
+   "Incoming Asset",
+   "Incoming Amount",
+   "Fee Asset (optional)",
+   "Fee Amount (optional)",
+   "Comment (optional)",
+   "Trx. ID (optional)",
+   "Source Type",
+   "Source Name"
+  ],
+  "name": "Blockpit",
+  "idx": 62
+ },
+ {
+  "header": [
+   "Blockpit ID",
+   "Timestamp",
+   "Source Type",
+   "Source Name",
+   "Integration",
+   "Transaction Type",
+   "Outgoing Asset",
+   "Outgoing Amount",
+   "Incoming Asset",
+   "Incoming Amount",
+   "Fee Asset",
+   "Fee Amount",
+   "Transaction ID",
+   "Note",
+   "Merge ID"
+  ],
+  "name": "Blockpit",
+  "idx": 63
+ },
+ {
+  "header": [
+   "TxHash",
+   "BlockNumber",
+   "UnixTimestamp",
+   "FromAddress",
+   "ToAddress",
+   "ContractAddress",
+   "Type",
+   "Value",
+   "Fee",
+   "Status",
+   "ErrCode",
+   "CurrentPrice",
+   "TxDateOpeningPrice",
+   "TxDateClosingPrice"
+  ],
+  "name": "Blockscout",
+  "idx": 64
+ },
+ {
+  "header": [
+   "TxHash",
+   "BlockNumber",
+   "UnixTimestamp",
+   "FromAddress",
+   "ToAddress",
+   "TokenContractAddress",
+   "Type",
+   "TokenSymbol",
+   "TokensTransferred",
+   "TransactionFee",
+   "Status",
+   "ErrCode"
+  ],
+  "name": "Blockscout (Tokens)",
+  "idx": 65
+ },
+ {
+  "header": [
+   "Asset",
+   "amount",
+   "chain_name",
+   "txid",
+   "Time",
+   "State"
+  ],
+  "name": "BloFin Deposits",
+  "idx": 66
+ },
+ {
+  "header": [
+   "Asset",
+   "amount",
+   "chain_name",
+   "txid",
+   "Address",
+   "Tag",
+   "Time",
+   "State"
+  ],
+  "name": "BloFin Withdrawals",
+  "idx": 67
+ },
+ {
+  "header": [
+   "Underlying Asset",
+   "order_time",
+   "Side",
+   "Avg Filled price",
+   "Price",
+   "Filled(Quantity)",
+   "Filled(Total)",
+   "Filled(Value)",
+   "Filled(OrderValue)",
+   "Fee",
+   "Order options",
+   "Status"
+  ],
+  "name": "BloFin Spot Trades",
+  "idx": 68
+ },
+ {
+  "header": [
+   "Underlying Asset",
+   "Order Time",
+   "Side",
+   "Avg Fill",
+   "Price",
+   "Filled",
+   "Total",
+   "Fee",
+   "Order Options",
+   "Status"
+  ],
+  "name": "BloFin Spot Trades",
+  "idx": 69
+ },
+ {
+  "header": [
+   "Underlying Asset",
+   "order_time",
+   "Side",
+   "price",
+   "Order price",
+   "Filled(Quantity)",
+   "Filled(Total)",
+   "Filled(Value)",
+   "Filled(OrderValue)",
+   "PNL",
+   "PNL%",
+   "Fee",
+   "Order options",
+   "Reduce-only",
+   "Status"
+  ],
+  "name": "BloFin Futures",
+  "idx": 70
+ },
+ {
+  "header": [
+   "Underlying Asset",
+   "Margin Mode",
+   "Leverage",
+   "Order Time",
+   "Side",
+   "Avg Fill",
+   "Price",
+   "Filled",
+   "Total",
+   "PNL",
+   "PNL%",
+   "Fee",
+   "Order Options",
+   "Reduce-only",
+   "Status"
+  ],
+  "name": "BloFin Margin Trades",
+  "idx": 71
+ },
+ {
+  "header": [
+   "symbol",
+   "QTY",
+   "Funding rate",
+   "Funding type",
+   "Funding Fee",
+   "real_funding_amount",
+   "Time"
+  ],
+  "name": "BloFin Funding",
+  "idx": 72
+ },
+ {
+  "header": [
+   "Date",
+   "Description",
+   "Currency",
+   "Details",
+   "Transaction ID",
+   "In",
+   "Out"
+  ],
+  "name": "BnkToTheFuture",
+  "idx": 73
+ },
+ {
+  "header": [
+   "Date & Time(UTC)",
+   "Coin",
+   "QTY",
+   "Type",
+   "Account Balance",
+   "Description"
+  ],
+  "name": "Bybit Deposits/Withdrawals",
+  "idx": 74
+ },
+ {
+  "header": [
+   "Type",
+   "Coin",
+   "Amount",
+   "Wallet Balance",
+   "Time(UTC)"
+  ],
+  "name": "Bybit Deposits/Withdrawals",
+  "idx": 75
+ },
+ {
+  "header": [
+   "Time",
+   "Currency",
+   "Contract",
+   "Type",
+   "Direction",
+   "Quantity",
+   "Position",
+   "Filled Price",
+   "Funding",
+   "Fee Paid",
+   "Cash Flow",
+   "Change",
+   "Wallet Balance",
+   "Fee Rate",
+   "Trade ID",
+   "Order ID"
+  ],
+  "name": "Bybit",
+  "idx": 76
+ },
+ {
+  "header": [
+   "Date",
+   "Transaction ID",
+   "Transaction Type",
+   "Currency",
+   "Amount",
+   "Fee",
+   "Net Amount",
+   "Asset Type",
+   "Asset Price",
+   "Asset Amount",
+   "Status",
+   "Notes",
+   "Name of sender/receiver",
+   "Account"
+  ],
+  "name": "Cash App",
+  "idx": 77
+ },
+ {
+  "header": [
+   "Transaction ID",
+   "Date",
+   "Transaction Type",
+   "Currency",
+   "Amount",
+   "Fee",
+   "Net Amount",
+   "Asset Type",
+   "Asset Price",
+   "Asset Amount",
+   "Status",
+   "Notes",
+   "Name of sender/receiver",
+   "Account"
+  ],
+  "name": "Cash App",
+  "idx": 78
+ },
+ {
+  "header": [
+   "Internal id",
+   "Date and time",
+   "Transaction type",
+   "Coin type",
+   "Coin amount",
+   "USD Value",
+   "Original Reward Coin",
+   "Reward Amount In Original Coin",
+   "Confirmed"
+  ],
+  "name": "Celsius",
+  "idx": 79
+ },
+ {
+  "header": [
+   "Internal id",
+   "Date and time",
+   "Transaction type",
+   "Coin type",
+   "Coin amount",
+   "USD Value",
+   "Original Interest Coin",
+   "Interest Amount In Original Coin",
+   "Confirmed"
+  ],
+  "name": "Celsius",
+  "idx": 80
+ },
+ {
+  "header": [
+   "DateUTC",
+   "Amount",
+   "Symbol",
+   "Balance",
+   "Type",
+   "Pair",
+   "FeeSymbol",
+   "FeeAmount",
+   "Comment"
+  ],
+  "name": "CEX.IO",
+  "idx": 81
+ },
+ {
+  "header": [
+   "B/S",
+   "Date",
+   "Company",
+   "Shares",
+   "Price",
+   "Charges",
+   "Tax"
+  ],
+  "name": "CGTCalculator",
+  "idx": 82
+ },
+ {
+  "header": [
+   "B/S",
+   "Date",
+   "Company",
+   "Shares",
+   "Price",
+   "Charges",
+   "Tax",
+   ""
+  ],
+  "name": "CGTCalculator",
+  "idx": 83
+ },
+ {
+  "header": [
+   "Currency from",
+   "Currency to",
+   "Status",
+   "Date",
+   "Exchange amount",
+   "Total fee",
+   "Exchange rate",
+   "Receiver",
+   "Amount received"
+  ],
+  "name": "Changelly",
+  "idx": 84
+ },
+ {
+  "header": [
+   "On",
+   "From",
+   "To",
+   "When",
+   "Amount in Satoshi",
+   "mBTC",
+   "Status",
+   "Message"
+  ],
+  "name": "ChangeTip",
+  "idx": 85
+ },
+ {
+  "header": [
+   "Date",
+   "Reference ID",
+   "Transaction Type",
+   "From Account",
+   "To Account",
+   "From Amount",
+   "From Currency",
+   "To Amount",
+   "To Currency",
+   "Status"
+  ],
+  "name": "Circle",
+  "idx": 86
+ },
+ {
+  "header": [
+   "ID",
+   "Timestamp",
+   "Transaction Type",
+   "Asset",
+   "Quantity Transacted",
+   "Price Currency",
+   "Price at Transaction",
+   "Subtotal",
+   "Total (inclusive of fees and/or spread)",
+   "Fees and/or Spread",
+   "Notes"
+  ],
+  "name": "Coinbase",
+  "idx": 87
+ },
+ {
+  "header": [
+   "Timestamp",
+   "Transaction Type",
+   "Asset",
+   "Quantity Transacted",
+   "Price Currency",
+   "Price at Transaction",
+   "Subtotal",
+   "Total (inclusive of fees and/or spread)",
+   "Fees and/or Spread",
+   "Notes"
+  ],
+  "name": "Coinbase",
+  "idx": 88
+ },
+ {
+  "header": [
+   "Timestamp",
+   "Transaction Type",
+   "Asset",
+   "Quantity Transacted",
+   "Spot Price Currency",
+   "Spot Price at Transaction",
+   "Subtotal",
+   "Total (inclusive of fees and/or spread)",
+   "Fees and/or Spread",
+   "Notes"
+  ],
+  "name": "Coinbase",
+  "idx": 89
+ },
+ {
+  "header": [
+   "Timestamp",
+   "Transaction Type",
+   "Asset",
+   "Quantity Transacted",
+   "Spot Price Currency",
+   "Spot Price at Transaction",
+   "Subtotal",
+   "Total (inclusive of fees)",
+   "Fees",
+   "Notes"
+  ],
+  "name": "Coinbase",
+  "idx": 90
+ },
+ {
+  "header": [
+   "Timestamp",
+   "Transaction Type",
+   "Asset",
+   "Quantity Transacted",
+   "",
+   "",
+   "",
+   "",
+   "Notes"
+  ],
+  "name": null,
+  "idx": -1
+ },
+ {
+  "header": [
+   "Timestamp",
+   "Type",
+   "",
+   "Subtotal",
+   "Fees",
+   "Total",
+   "Currency",
+   "Price Per Coin",
+   "Payment Method",
+   "ID",
+   "Share"
+  ],
+  "name": "Coinbase Transfers",
+  "idx": 92
+ },
+ {
+  "header": [
+   "Timestamp",
+   "Balance",
+   "Amount",
+   "Currency",
+   "To",
+   "Notes",
+   "Instantly Exchanged",
+   "Transfer Total",
+   "Transfer Total Currency",
+   "Transfer Fee",
+   "Transfer Fee Currency",
+   "Transfer Payment Method",
+   "Transfer ID",
+   "Order Price",
+   "Order Currency",
+   "",
+   "Order Tracking Code",
+   "Order Custom Parameter",
+   "Order Paid Out",
+   "Recurring Payment ID",
+   "",
+   ""
+  ],
+  "name": "Coinbase Transactions",
+  "idx": 93
+ },
+ {
+  "header": [
+   "order id",
+   "status",
+   "market",
+   "side",
+   "type",
+   "limit price",
+   "total order quantity",
+   "order currency",
+   "filled base quantity",
+   "filled quote quantity",
+   "average fill price",
+   "total fees and commissions",
+   "initiated by",
+   "initiated time",
+   "last updated time",
+   "activity level",
+   "portfolio name",
+   "portfolio id",
+   "entity name",
+   "entity id"
+  ],
+  "name": "Coinbase Prime Orders",
+  "idx": 94
+ },
+ {
+  "header": [
+   "activity id",
+   "final status",
+   "activity title",
+   "activity type",
+   "asset",
+   "wallet name",
+   "transaction value",
+   "transaction currency",
+   "initiated by",
+   "approved by",
+   "rejected by",
+   "initiated time",
+   "last updated time",
+   "activity level",
+   "portfolio name",
+   "portfolio id",
+   "entity name",
+   "entity id"
+  ],
+  "name": "Coinbase Prime Transactions",
+  "idx": 95
+ },
+ {
+  "header": [
+   "portfolio",
+   "type",
+   "time",
+   "amount",
+   "balance",
+   "amount/balance unit",
+   "transfer id",
+   "trade id",
+   "order id"
+  ],
+  "name": "Coinbase Pro Account",
+  "idx": 96
+ },
+ {
+  "header": [
+   "portfolio",
+   "trade id",
+   "product",
+   "side",
+   "created at",
+   "size",
+   "size unit",
+   "price",
+   "fee",
+   "total",
+   "price/fee/total unit"
+  ],
+  "name": "Coinbase Pro Fills",
+  "idx": 97
+ },
+ {
+  "header": [
+   "trade id",
+   "product",
+   "side",
+   "created at",
+   "size",
+   "size unit",
+   "price",
+   "fee",
+   "total",
+   "price/fee/total unit"
+  ],
+  "name": "Coinbase Pro Fills",
+  "idx": 98
+ },
+ {
+  "header": [
+   "type",
+   "time",
+   "amount",
+   "balance",
+   "amount/balance unit",
+   "transfer id",
+   "trade id",
+   "order id"
+  ],
+  "name": "Coinbase Pro Account",
+  "idx": 99
+ },
+ {
+  "header": [
+   "Date & Time",
+   "Store/Website",
+   "Detail",
+   "Type",
+   "Tx ID",
+   "Price",
+   "Price Currency",
+   "Gross",
+   "Gross Currency",
+   "Fee",
+   "Fee Currency",
+   "Net",
+   "Net Currency",
+   "Balance",
+   "Balance Currency"
+  ],
+  "name": "CoinCorner",
+  "idx": 100
+ },
+ {
+  "header": [
+   "Date",
+   "Currency",
+   "Transaction Type",
+   "Amount",
+   "Balance"
+  ],
+  "name": "CoinCorner",
+  "idx": 101
+ },
+ {
+  "header": [
+   "Date & Time",
+   "Base Asset",
+   "Counter Asset",
+   "Amount",
+   "Price",
+   "Total",
+   "Fee",
+   "Order Type"
+  ],
+  "name": "Coinfloor Trades",
+  "idx": 102
+ },
+ {
+  "header": [
+   "Date & Time",
+   "Base Asset",
+   "Counter Asset",
+   "Amount",
+   "Price",
+   "Total",
+   "Fee",
+   "Order Type",
+   "Trade ID",
+   "Order ID"
+  ],
+  "name": "Coinfloor Trades",
+  "idx": 103
+ },
+ {
+  "header": [
+   "Date & Time",
+   "Amount",
+   "Asset",
+   "Type"
+  ],
+  "name": "Coinfloor Deposits/Withdrawals",
+  "idx": 104
+ },
+ {
+  "header": [
+   "Date & Time",
+   "Amount",
+   "Asset",
+   "Type",
+   "Address",
+   "Transaction Hash"
+  ],
+  "name": "Coinfloor Deposits/Withdrawals",
+  "idx": 105
+ },
+ {
+  "header": [
+   "Date",
+   "Description",
+   "Asset",
+   "Amount",
+   "Balance"
+  ],
+  "name": "CoinList",
+  "idx": 106
+ },
+ {
+  "header": [
+   "portfolio",
+   "type",
+   "time",
+   "amount",
+   "balance",
+   "amount/balance unit",
+   "transaction_id"
+  ],
+  "name": "CoinList Pro",
+  "idx": 107
+ },
+ {
+  "header": [
+   "Asset",
+   "Date",
+   "Description",
+   "Amount",
+   "Fee",
+   "Price",
+   "Pair",
+   "Other Currency",
+   "Other Amount",
+   "IBAN",
+   "Transaction Hash",
+   "Address",
+   "Tram",
+   "Additional Info",
+   "Reference Note",
+   "Comment"
+  ],
+  "name": "Coinmetro",
+  "idx": 108
+ },
+ {
+  "header": [
+   "Asset",
+   "AccountName",
+   "Address",
+   "AddressName",
+   "Value",
+   "Symbol",
+   "Fees",
+   "InternalTransfer",
+   "TransactionID",
+   "Time(UTC)",
+   "Time(ISO8601-UTC)",
+   "BlockExplorer"
+  ],
+  "name": "Coinomi",
+  "idx": 109
+ },
+ {
+  "header": [
+   "Date",
+   "Type",
+   "Transaction ID",
+   "Received Quantity",
+   "Received Currency",
+   "",
+   "Received Wallet",
+   "Received Address",
+   "Received Comment",
+   "Sent Quantity",
+   "Sent Currency",
+   "",
+   "Sent Wallet",
+   "Sent Address",
+   "Sent Comment",
+   "Fee Amount",
+   "Fee Currency",
+   "",
+   "",
+   "",
+   "Transaction Hash"
+  ],
+  "name": null,
+  "idx": -1
+ },
+ {
+  "header": [
+   "Date",
+   "Type",
+   "Transaction ID",
+   "Received Quantity",
+   "Received Currency",
+   "",
+   "Received Wallet",
+   "Received Address",
+   "Received Tag",
+   "Received Comment",
+   "Sent Quantity",
+   "Sent Currency",
+   "",
+   "Sent Wallet",
+   "Sent Address",
+   "Sent Tag",
+   "Sent Comment",
+   "Fee Amount",
+   "Fee Currency",
+   "",
+   "Ignored"
+  ],
+  "name": null,
+  "idx": -1
+ },
+ {
+  "header": [
+   "Type",
+   "Buy",
+   "Cur.",
+   "Value in BTC",
+   "",
+   "Sell",
+   "Cur.",
+   "Value in BTC",
+   "",
+   "Spread",
+   "Exchange",
+   "Group",
+   "Date"
+  ],
+  "name": null,
+  "idx": -1
+ },
+ {
+  "header": [
+   "Timestamp (UTC)",
+   "Transaction Description",
+   "Currency",
+   "Amount",
+   "To Currency",
+   "To Amount",
+   "Native Currency",
+   "Native Amount",
+   "Native Amount (in USD)",
+   "Transaction Kind",
+   "Transaction Hash"
+  ],
+  "name": "Crypto.com",
+  "idx": 113
+ },
+ {
+  "header": [
+   "Timestamp (UTC)",
+   "Transaction Description",
+   "Currency",
+   "Amount",
+   "To Currency",
+   "To Amount",
+   "Native Currency",
+   "Native Amount",
+   "Native Amount (in USD)",
+   "Transaction Kind"
+  ],
+  "name": "Crypto.com",
+  "idx": 114
+ },
+ {
+  "header": [
+   "#",
+   "Currency",
+   "Amount",
+   "Status",
+   "Type",
+   "Transaction",
+   "Conf.",
+   "Timestamp"
+  ],
+  "name": "Cryptopia Deposits",
+  "idx": 115
+ },
+ {
+  "header": [
+   "#",
+   "Currency",
+   "Amount",
+   "Fee",
+   "Status",
+   "TransactionId",
+   "Address",
+   "Timestamp"
+  ],
+  "name": "Cryptopia Withdrawals",
+  "idx": 116
+ },
+ {
+  "header": [
+   "#",
+   "Market",
+   "Type",
+   "Rate",
+   "Amount",
+   "Total",
+   "Fee",
+   "Timestamp"
+  ],
+  "name": "Cryptopia Trades",
+  "idx": 117
+ },
+ {
+  "header": [
+   "TradeID",
+   "OrderType",
+   "Market",
+   "Price",
+   "Quantity",
+   "Total",
+   "Fee",
+   "Net",
+   "Timestamp"
+  ],
+  "name": "Cryptsy",
+  "idx": 118
+ },
+ {
+  "header": [
+   "timestamp",
+   "UTC datetime",
+   "chain",
+   "transaction hash",
+   "color",
+   "classification",
+   "custom note",
+   "counterparty address",
+   "counterparty name",
+   "function hex signature",
+   "operation (decoded hex signature)",
+   "source address",
+   "source is me",
+   "destination address",
+   "destination is me",
+   "amount transfered",
+   "token contract address",
+   "token symbol",
+   "token unique",
+   "token ID",
+   "transfer type",
+   "tax treatment",
+   "vault id",
+   "coingecko id",
+   "rate source",
+   "USD rate",
+   "url"
+  ],
+  "name": "DeFi Taxes",
+  "idx": 119
+ },
+ {
+  "header": [
+   "ID",
+   "UserSeq",
+   "Date",
+   "Instrument",
+   "Type",
+   "Side",
+   "Amount",
+   "Base Amount",
+   "Position",
+   "Price",
+   "Mark Price",
+   "Index Price",
+   "Cash Flow",
+   "Funding",
+   "Fee Rate",
+   "Fee Charged",
+   "Fee Balance",
+   "Change",
+   "Balance",
+   "Equity",
+   "Trade ID",
+   "Order ID",
+   "Info",
+   "Note"
+  ],
+  "name": "Deribit",
+  "idx": 120
+ },
+ {
+  "header": [
+   "ID",
+   "UserSeq",
+   "Date",
+   "Instrument",
+   "Type",
+   "Side",
+   "Base Amount",
+   "Position",
+   "Price",
+   "Mark Price",
+   "Index Price",
+   "Cash Flow",
+   "Funding",
+   "Fee Rate",
+   "Fee Charged",
+   "Fee Balance",
+   "Change",
+   "Balance",
+   "Equity",
+   "Trade ID",
+   "Order ID",
+   "Info",
+   "Note"
+  ],
+  "name": "Deribit",
+  "idx": 121
+ },
+ {
+  "header": [
+   "ID",
+   "UserSeq",
+   "Date",
+   "Instrument",
+   "Type",
+   "Side",
+   "Base Amount",
+   "Position",
+   "Price",
+   "Mark Price",
+   "Index Price",
+   "Cash Flow",
+   "Funding",
+   "Fee Rate",
+   "Fee Charged",
+   "Fee Balance",
+   "Change",
+   "Balance",
+   "Equity",
+   "Trade ID",
+   "Order ID",
+   "Info"
+  ],
+  "name": "Deribit",
+  "idx": 122
+ },
+ {
+  "header": [
+   "ID",
+   "UserSeq",
+   "Date",
+   "Instrument",
+   "Type",
+   "Side",
+   "Size",
+   "Position",
+   "Price",
+   "Mark Price",
+   "Cash Flow",
+   "Funding",
+   "Fee Rate",
+   "Fee Paid",
+   "Fee Balance",
+   "Change",
+   "Balance",
+   "Equity",
+   "Trade ID",
+   "Order ID",
+   "Info"
+  ],
+  "name": "Deribit",
+  "idx": 123
+ },
+ {
+  "header": [
+   "Date",
+   "Order ID",
+   "Type",
+   "From symbol",
+   "To symbol",
+   "From amount",
+   "To amount",
+   "To address",
+   "To memo",
+   "Fiat Value"
+  ],
+  "name": "Easy Crypto",
+  "idx": 124
+ },
+ {
+  "header": [
+   "transaction_hash",
+   "label",
+   "confirmations",
+   "value",
+   "fiat_value",
+   "fee",
+   "fiat_fee",
+   "timestamp"
+  ],
+  "name": "Electrum",
+  "idx": 125
+ },
+ {
+  "header": [
+   "transaction_hash",
+   "label",
+   "value",
+   "timestamp"
+  ],
+  "name": "Electrum",
+  "idx": 126
+ },
+ {
+  "header": [
+   "transaction_hash",
+   "label",
+   "confirmations",
+   "value",
+   "timestamp"
+  ],
+  "name": "Electrum",
+  "idx": 127
+ },
+ {
+  "header": [
+   "Date",
+   "Sent Amount",
+   "Sent Currency",
+   "Received Amount",
+   "Received Currency",
+   "Fee Amount",
+   "Fee Currency",
+   "Label",
+   "Description",
+   "TxHash",
+   "TxType"
+  ],
+  "name": "Eternl",
+  "idx": 128
+ },
+ {
+  "header": [
+   "",
+   "Blockno",
+   "UnixTimestamp",
+   "",
+   "From",
+   "To",
+   "ContractAddress",
+   "",
+   "",
+   "",
+   "",
+   "TxnFee(USD)",
+   "",
+   "Status",
+   "ErrCode",
+   "Method"
+  ],
+  "name": null,
+  "idx": -1
+ },
+ {
+  "header": [
+   "",
+   "Blockno",
+   "UnixTimestamp",
+   "",
+   "From",
+   "To",
+   "ContractAddress",
+   "",
+   "",
+   "",
+   "",
+   "TxnFee(USD)",
+   "",
+   "Status",
+   "ErrCode",
+   "Method",
+   "PrivateNote"
+  ],
+  "name": null,
+  "idx": -1
+ },
+ {
+  "header": [
+   "Txhash",
+   "Blockno",
+   "UnixTimestamp",
+   "DateTime",
+   "From",
+   "To",
+   "ContractAddress",
+   "",
+   "",
+   "",
+   "",
+   "TxnFee(USD)",
+   "",
+   "Status",
+   "ErrCode"
+  ],
+  "name": null,
+  "idx": -1
+ },
+ {
+  "header": [
+   "Txhash",
+   "Blockno",
+   "UnixTimestamp",
+   "DateTime",
+   "From",
+   "To",
+   "ContractAddress",
+   "",
+   "",
+   "",
+   "",
+   "TxnFee(USD)",
+   "",
+   "Status",
+   "ErrCode",
+   "PrivateNote"
+  ],
+  "name": null,
+  "idx": -1
+ },
+ {
+  "header": [
+   "",
+   "Blockno",
+   "UnixTimestamp",
+   "",
+   "ParentTxFrom",
+   "ParentTxTo",
+   "",
+   "From",
+   "TxTo",
+   "ContractAddress",
+   "",
+   "",
+   "",
+   "",
+   "Status",
+   "ErrCode",
+   "Type"
+  ],
+  "name": null,
+  "idx": -1
+ },
+ {
+  "header": [
+   "",
+   "Blockno",
+   "UnixTimestamp",
+   "",
+   "ParentTxFrom",
+   "ParentTxTo",
+   "",
+   "From",
+   "TxTo",
+   "ContractAddress",
+   "",
+   "",
+   "",
+   "",
+   "Status",
+   "ErrCode",
+   "Type",
+   "PrivateNote"
+  ],
+  "name": null,
+  "idx": -1
+ },
+ {
+  "header": [
+   "",
+   "Blockno",
+   "UnixTimestamp",
+   "",
+   "From",
+   "To",
+   "TokenValue",
+   "USDValueDayOfTx",
+   "ContractAddress",
+   "TokenName",
+   "TokenSymbol"
+  ],
+  "name": null,
+  "idx": -1
+ },
+ {
+  "header": [
+   "Txhash",
+   "UnixTimestamp",
+   "DateTime",
+   "From",
+   "To",
+   "Value",
+   "ContractAddress",
+   "TokenName",
+   "TokenSymbol"
+  ],
+  "name": "Etherscan (Token Transfers ERC-20)",
+  "idx": 136
+ },
+ {
+  "header": [
+   "",
+   "Blockno",
+   "UnixTimestamp",
+   "DateTime (UTC)",
+   "From",
+   "To",
+   "ContractAddress",
+   "TokenName",
+   "TokenSymbol",
+   "Token ID",
+   "Type",
+   "Quantity"
+  ],
+  "name": null,
+  "idx": -1
+ },
+ {
+  "header": [
+   "Txhash",
+   "Blockno",
+   "UnixTimestamp",
+   "DateTime",
+   "From",
+   "To",
+   "ContractAddress",
+   "TokenId",
+   "TokenName",
+   "TokenSymbol"
+  ],
+  "name": "Etherscan (NFT Transfers ERC-721 & ERC-1155)",
+  "idx": 138
+ },
+ {
+  "header": [
+   "Txhash",
+   "UnixTimestamp",
+   "DateTime",
+   "From",
+   "To",
+   "ContractAddress",
+   "TokenId",
+   "TokenName",
+   "TokenSymbol"
+  ],
+  "name": "Etherscan (NFT Transfers ERC-721 & ERC-1155)",
+  "idx": 139
+ },
+ {
+  "header": [
+   "Type",
+   "Buy",
+   "Cur.",
+   "Exchange",
+   "Group",
+   "Comment",
+   "Date"
+  ],
+  "name": "Exodus Staking",
+  "idx": 140
+ },
+ {
+  "header": [
+   "TXID",
+   "TXURL",
+   "DATE",
+   "TYPE",
+   "FROMPORTFOLIO",
+   "TOPORTFOLIO",
+   "COINAMOUNT",
+   "FEE",
+   "BALANCE",
+   "EXCHANGE",
+   "PERSONALNOTE"
+  ],
+  "name": "Exodus",
+  "idx": 141
+ },
+ {
+  "header": [
+   "DATE",
+   "TYPE",
+   "FROMPORTFOLIO",
+   "TOPORTFOLIO",
+   "OUTAMOUNT",
+   "OUTCURRENCY",
+   "FEEAMOUNT",
+   "FEECURRENCY",
+   "FROMADDRESS",
+   "TOADDRESS",
+   "OUTTXID",
+   "OUTTXURL",
+   "INAMOUNT",
+   "INCURRENCY",
+   "INTXID",
+   "INTXURL",
+   "ORDERID",
+   "PERSONALNOTE"
+  ],
+  "name": "Exodus",
+  "idx": 142
+ },
+ {
+  "header": [
+   "DATE",
+   "TYPE",
+   "FROMPORTFOLIO",
+   "TOPORTFOLIO",
+   "OUTAMOUNT",
+   "OUTCURRENCY",
+   "FEEAMOUNT",
+   "FEECURRENCY",
+   "TOADDRESS",
+   "OUTTXID",
+   "OUTTXURL",
+   "INAMOUNT",
+   "INCURRENCY",
+   "INTXID",
+   "INTXURL",
+   "ORDERID",
+   "PERSONALNOTE"
+  ],
+  "name": "Exodus",
+  "idx": 143
+ },
+ {
+  "header": [
+   "DATE",
+   "TYPE",
+   "FROMPORTFOLIO",
+   "TOPORTFOLIO",
+   "OUTAMOUNT",
+   "OUTCURRENCY",
+   "FEEAMOUNT",
+   "FEECURRENCY",
+   "OUTTXID",
+   "OUTTXURL",
+   "INAMOUNT",
+   "INCURRENCY",
+   "INTXID",
+   "INTXURL",
+   "ORDERID",
+   "PERSONALNOTE",
+   "TOADDRESS"
+  ],
+  "name": "Exodus",
+  "idx": 144
+ },
+ {
+  "header": [
+   "currency",
+   "burnDate",
+   "inSymbol",
+   "inAmount",
+   "outSymbol",
+   "outAmount",
+   "xactnFee",
+   "inCoinPrice",
+   "outCoinPrice",
+   "xactnFeeCoinPrice",
+   "xactnType",
+   "xactnTypeDetail",
+   "xactnId",
+   "inAmountRaw",
+   "outAmountRaw",
+   "xactnFeeRaw",
+   "sender",
+   "recipient",
+   "memo",
+   "burnDateAltFormat1"
+  ],
+  "name": "FatStx",
+  "idx": 145
+ },
+ {
+  "header": [
+   "",
+   "Time",
+   "Coin",
+   "Amount",
+   "Status",
+   "Additional info",
+   "Transaction ID"
+  ],
+  "name": "FTX Deposits",
+  "idx": 146
+ },
+ {
+  "header": [
+   "",
+   "Time",
+   "Coin",
+   "Amount",
+   "Status",
+   "Additional info",
+   "Transaction ID",
+   ""
+  ],
+  "name": "FTX Deposits",
+  "idx": 147
+ },
+ {
+  "header": [
+   "id",
+   "time",
+   "coin",
+   "size",
+   "status",
+   "additionalInfo",
+   "txid",
+   "_delete"
+  ],
+  "name": "FTX Deposits",
+  "idx": 148
+ },
+ {
+  "header": [
+   "id",
+   "time",
+   "coin",
+   "size",
+   "status",
+   "txid"
+  ],
+  "name": "FTX Deposits",
+  "idx": 149
+ },
+ {
+  "header": [
+   "",
+   "Time",
+   "Coin",
+   "Amount",
+   "Destination",
+   "Status",
+   "Transaction ID",
+   "fee"
+  ],
+  "name": "FTX Withdrawals",
+  "idx": 150
+ },
+ {
+  "header": [
+   "Time",
+   "Coin",
+   "Amount",
+   "Destination",
+   "Status",
+   "Transaction ID",
+   "fee",
+   ""
+  ],
+  "name": "FTX Withdrawals",
+  "idx": 151
+ },
+ {
+  "header": [
+   "time",
+   "coin",
+   "size",
+   "address",
+   "status",
+   "txid",
+   "fee",
+   "id"
+  ],
+  "name": "FTX Withdrawals",
+  "idx": 152
+ },
+ {
+  "header": [
+   "ID",
+   "Time",
+   "Market",
+   "Side",
+   "Order Type",
+   "Size",
+   "Price",
+   "Total",
+   "Fee",
+   "Fee Currency",
+   "TWAP"
+  ],
+  "name": "FTX Trades",
+  "idx": 153
+ },
+ {
+  "header": [
+   "ID",
+   "Time",
+   "Market",
+   "Side",
+   "Order Type",
+   "Size",
+   "Price",
+   "Total",
+   "Fee",
+   "Fee Currency"
+  ],
+  "name": "FTX Trades",
+  "idx": 154
+ },
+ {
+  "header": [
+   "id",
+   "time",
+   "market",
+   "side",
+   "type",
+   "size",
+   "price",
+   "total",
+   "fee",
+   "feeCurrency"
+  ],
+  "name": "FTX Trades",
+  "idx": 155
+ },
+ {
+  "header": [
+   "time",
+   "from",
+   "to",
+   "size",
+   "fee",
+   "price",
+   "proceeds",
+   "status"
+  ],
+  "name": "FTX Dust Conversion",
+  "idx": 156
+ },
+ {
+  "header": [
+   "Time",
+   "Currency",
+   "Size",
+   "Hourly Funding Rate",
+   "Proceeds",
+   "Proceeds in USD"
+  ],
+  "name": "FTX Lending",
+  "idx": 157
+ },
+ {
+  "header": [
+   "time",
+   "coin",
+   "size",
+   "rate",
+   "proceeds",
+   "feeUsd"
+  ],
+  "name": "FTX Lending",
+  "idx": 158
+ },
+ {
+  "header": [
+   "time",
+   "coin",
+   "size",
+   "rate",
+   "proceeds"
+  ],
+  "name": "FTX Lending",
+  "idx": 159
+ },
+ {
+  "header": [
+   "Time",
+   "Notes",
+   "Coin",
+   "Reward"
+  ],
+  "name": "FTX Staking",
+  "idx": 160
+ },
+ {
+  "header": [
+   "Time",
+   "TX hash",
+   "Type",
+   "Amount",
+   "Currency",
+   "Currency Issuer Address",
+   "Currency Issuer Name",
+   "Balance"
+  ],
+  "name": "GateHub (XRP)",
+  "idx": 161
+ },
+ {
+  "header": [
+   "no",
+   "time",
+   "action_desc",
+   "action_data",
+   "type",
+   "change_amount",
+   "amount",
+   "total"
+  ],
+  "name": "Gate.io",
+  "idx": 162
+ },
+ {
+  "header": [
+   "Date",
+   "Time (UTC)",
+   "Type",
+   "Symbol",
+   "Specification",
+   "Liquidity Indicator",
+   "Trading Fee Rate (bps)",
+   "Trade ID",
+   "Order ID",
+   "Order Date",
+   "Order Time",
+   "Client Order ID",
+   "API Session",
+   "Tx Hash",
+   "Deposit Destination",
+   "Deposit Tx Output",
+   "Withdrawal Destination",
+   "Withdrawal Tx Output"
+  ],
+  "name": "Gemini",
+  "idx": 163
+ },
+ {
+  "header": [
+   "Type",
+   "Buy Quantity",
+   "Buy Asset",
+   "",
+   "Sell Quantity",
+   "Sell Asset",
+   "",
+   "Fee Quantity",
+   "Fee Asset",
+   "",
+   "Wallet",
+   "Timestamp",
+   "Note",
+   "Raw Data"
+  ],
+  "name": null,
+  "idx": -1
+ },
+ {
+  "header": [
+   "transaction id",
+   "from account",
+   "to account",
+   "from account type",
+   "to account type",
+   "date utc",
+   "transaction type",
+   "status",
+   "amount",
+   "currency",
+   "withdrawal_address"
+  ],
+  "name": "Gravity (Bitstocks)",
+  "idx": 165
+ },
+ {
+  "header": [
+   "transaction id",
+   "from account",
+   "to account",
+   "date utc",
+   "transaction type",
+   "status",
+   "amount",
+   "currency"
+  ],
+  "name": "Gravity (Bitstocks)",
+  "idx": 166
+ },
+ {
+  "header": [
+   "type",
+   "addresses",
+   "transactionId",
+   "note",
+   "satoshiFees",
+   "satoshiAmount",
+   "fiatExchangeRate",
+   "fiatCurrencyCode",
+   "participants",
+   "createdAt"
+  ],
+  "name": "HandCash",
+  "idx": 167
+ },
+ {
+  "header": [
+   "type",
+   "addresses",
+   "transactionId",
+   "note",
+   "satoshiFees",
+   "satoshiAmount",
+   "fiatExchangeRate",
+   "fiatCurrencyCode",
+   "participants",
+   "updatedAt",
+   "createdAt"
+  ],
+  "name": "HandCash",
+  "idx": 168
+ },
+ {
+  "header": [
+   "block",
+   "date",
+   "type",
+   "transaction_hash",
+   "hnt_amount",
+   "hnt_fee",
+   "usd_oracle_price",
+   "usd_amount",
+   "usd_fee",
+   "payer",
+   "payee"
+  ],
+  "name": "Helium",
+  "idx": 169
+ },
+ {
+  "header": [
+   "Date",
+   "Received Quantity",
+   "Received From",
+   "Received Currency",
+   "Sent Quantity",
+   "Sent To",
+   "Sent Currency",
+   "Fee Amount",
+   "Fee Currency",
+   "Tag",
+   "Note",
+   "Hotspot",
+   "Reward Type",
+   "Block",
+   "Hash"
+  ],
+  "name": "Helium Explorer",
+  "idx": 170
+ },
+ {
+  "header": [
+   "Email",
+   "Date (UTC)",
+   "Instrument",
+   "Trade ID",
+   "Order ID",
+   "Side",
+   "Quantity",
+   "Price",
+   "Volume",
+   "Fee",
+   "Rebate",
+   "PnL",
+   "Total",
+   "Taker",
+   "Margin Mode"
+  ],
+  "name": "HitBTC Trades",
+  "idx": 171
+ },
+ {
+  "header": [
+   "Email",
+   "Date (UTC)",
+   "Instrument",
+   "Trade ID",
+   "Order ID",
+   "Side",
+   "Quantity",
+   "Price",
+   "Volume",
+   "Fee",
+   "Rebate",
+   "Total",
+   "Taker"
+  ],
+  "name": "HitBTC Trades",
+  "idx": 172
+ },
+ {
+  "header": [
+   "Email",
+   "Date (UTC)",
+   "Instrument",
+   "Trade ID",
+   "Order ID",
+   "Side",
+   "Quantity",
+   "Price",
+   "Volume",
+   "Fee",
+   "Rebate",
+   "Total"
+  ],
+  "name": "HitBTC Trades",
+  "idx": 173
+ },
+ {
+  "header": [
+   "Date (UTC)",
+   "Instrument",
+   "Trade ID",
+   "Order ID",
+   "Side",
+   "Quantity",
+   "Price",
+   "Volume",
+   "Fee",
+   "Rebate",
+   "Total"
+  ],
+  "name": "HitBTC Trades",
+  "idx": 174
+ },
+ {
+  "header": [
+   "Email",
+   "Date (UTC)",
+   "Operation id",
+   "Type",
+   "Amount",
+   "Transaction hash",
+   "Main account balance",
+   "Currency"
+  ],
+  "name": "HitBTC Deposits/Withdrawals",
+  "idx": 175
+ },
+ {
+  "header": [
+   "Date (UTC)",
+   "Operation id",
+   "Type",
+   "Amount",
+   "Transaction Hash",
+   "Main account balance"
+  ],
+  "name": "HitBTC Deposits/Withdrawals",
+  "idx": 176
+ },
+ {
+  "header": [
+   "Date",
+   "Pair",
+   "Side",
+   "Price",
+   "Volume",
+   "Fee",
+   "Total"
+  ],
+  "name": "Hotbit Trades",
+  "idx": 177
+ },
+ {
+  "header": [
+   "Date",
+   "Pair",
+   "Side",
+   "Price",
+   "Amount",
+   "Fee",
+   "Total"
+  ],
+  "name": "Hotbit Trades",
+  "idx": 178
+ },
+ {
+  "header": [
+   "Date",
+   "Pair",
+   "Type",
+   "Price",
+   "Amount",
+   "Fee",
+   "Total",
+   "Export"
+  ],
+  "name": "Hotbit Trades",
+  "idx": 179
+ },
+ {
+  "header": [
+   "time",
+   "market",
+   "side",
+   "price",
+   "amount",
+   "deal",
+   "fee"
+  ],
+  "name": "Hotbit Trades",
+  "idx": 180
+ },
+ {
+  "header": [
+   "time",
+   "user_id",
+   "market",
+   "side",
+   "role",
+   "price",
+   "amount",
+   "deal",
+   "fee",
+   "platform",
+   "stock",
+   "deal_stock"
+  ],
+  "name": "Hotbit Trades",
+  "idx": 181
+ },
+ {
+  "header": [
+   "Settlement Date",
+   "Date",
+   "Symbol",
+   "Sedol",
+   "ISIN",
+   "Quantity",
+   "Price",
+   "Description",
+   "Reference",
+   "Debit",
+   "Credit",
+   "Running Balance"
+  ],
+  "name": "Interactive Investor",
+  "idx": 182
+ },
+ {
+  "header": [
+   "ID",
+   "Owner",
+   "Symbol",
+   "Created At",
+   "Updated At",
+   "Action",
+   "Order Type",
+   "Deposit/Withdrawal (USD)",
+   "Price",
+   "Size (USD)",
+   "PnL (USD)",
+   "Fee (USD)",
+   "Liquidation Fee (USD)",
+   "Transaction ID"
+  ],
+  "name": "Jupiter Futures",
+  "idx": 183
+ },
+ {
+  "header": [
+   "DateTime",
+   "HIN",
+   "Transactions_ID",
+   "Order_ID",
+   "Currency_Pair",
+   "Transaction_Type",
+   "Amount",
+   "Amount_Currency",
+   "Trade_Price",
+   "Trade_Price_Currency",
+   "Total",
+   "Fee",
+   "Fee_Currency",
+   "Trade_Value_in_USD"
+  ],
+  "name": "Kinesis",
+  "idx": 184
+ },
+ {
+  "header": [
+   "Date",
+   "Type",
+   "",
+   "Sending Wallet",
+   "Sent Amount",
+   "Sent Currency",
+   "Sent Cost Basis",
+   "Receiving Wallet",
+   "Received Amount",
+   "Received Currency",
+   "Received Cost Basis",
+   "Fee Amount",
+   "Fee Currency",
+   "",
+   "",
+   "",
+   "TxSrc",
+   "TxDest",
+   "TxHash",
+   "Description"
+  ],
+  "name": null,
+  "idx": -1
+ },
+ {
+  "header": [
+   "ID (read-only)",
+   "Parent ID (read-only)",
+   "Date (UTC)",
+   "Type",
+   "Tag",
+   "From Wallet (read-only)",
+   "From Wallet ID",
+   "From Amount",
+   "From Currency",
+   "To Wallet (read-only)",
+   "To Wallet ID",
+   "To Amount",
+   "To Currency",
+   "Fee Amount",
+   "Fee Currency",
+   "Net Worth Amount",
+   "Net Worth Currency",
+   "Fee Worth Amount",
+   "Fee Worth Currency",
+   "Net Value (read-only)",
+   "Fee Value (read-only)",
+   "Value Currency (read-only)",
+   "Deleted",
+   "From Source (read-only)",
+   "To Source (read-only)",
+   "Negative Balances (read-only)",
+   "Missing Rates (read-only)",
+   "Missing Cost Basis (read-only)",
+   "Synced To Accounting At (UTC read-only)",
+   "TxSrc",
+   "TxDest",
+   "TxHash",
+   "Description"
+  ],
+  "name": "Koinly",
+  "idx": 186
+ },
+ {
+  "header": [
+   "txid",
+   "refid",
+   "time",
+   "type",
+   "subtype",
+   "aclass",
+   "subclass",
+   "asset",
+   "wallet",
+   "amount",
+   "fee",
+   "balance"
+  ],
+  "name": "Kraken Ledgers",
+  "idx": 187
+ },
+ {
+  "header": [
+   "txid",
+   "refid",
+   "time",
+   "type",
+   "subtype",
+   "aclass",
+   "asset",
+   "wallet",
+   "amount",
+   "fee",
+   "balance",
+   "amountusd"
+  ],
+  "name": "Kraken Ledgers",
+  "idx": 188
+ },
+ {
+  "header": [
+   "txid",
+   "refid",
+   "time",
+   "type",
+   "subtype",
+   "aclass",
+   "asset",
+   "wallet",
+   "amount",
+   "fee",
+   "balance"
+  ],
+  "name": "Kraken Ledgers",
+  "idx": 189
+ },
+ {
+  "header": [
+   "txid",
+   "refid",
+   "time",
+   "type",
+   "subtype",
+   "aclass",
+   "asset",
+   "amount",
+   "fee",
+   "balance",
+   "amountusd"
+  ],
+  "name": "Kraken Ledgers",
+  "idx": 190
+ },
+ {
+  "header": [
+   "txid",
+   "refid",
+   "time",
+   "type",
+   "subtype",
+   "aclass",
+   "asset",
+   "amount",
+   "fee",
+   "balance"
+  ],
+  "name": "Kraken Ledgers",
+  "idx": 191
+ },
+ {
+  "header": [
+   "txid",
+   "refid",
+   "time",
+   "type",
+   "subtype",
+   "aclass",
+   "asset",
+   "wallet",
+   "amount",
+   "fee",
+   "balance"
+  ],
+  "name": "Kraken Ledgers",
+  "idx": 189
+ },
+ {
+  "header": [
+   "txid",
+   "refid",
+   "time",
+   "type",
+   "subtype",
+   "aclass",
+   "asset",
+   "amount",
+   "fee",
+   "balance",
+   ""
+  ],
+  "name": "Kraken Ledgers",
+  "idx": 193
+ },
+ {
+  "header": [
+   "txid",
+   "ordertxid",
+   "pair",
+   "time",
+   "type",
+   "ordertype",
+   "price",
+   "cost",
+   "fee",
+   "vol",
+   "margin",
+   "misc",
+   "ledgers",
+   "postxid",
+   "posstatus",
+   "cprice",
+   "ccost",
+   "cfee",
+   "cvol",
+   "cmargin",
+   "net",
+   "trades"
+  ],
+  "name": "Kraken Trades",
+  "idx": 194
+ },
+ {
+  "header": [
+   "txid",
+   "ordertxid",
+   "pair",
+   "time",
+   "type",
+   "ordertype",
+   "price",
+   "cost",
+   "fee",
+   "vol",
+   "margin",
+   "misc",
+   "ledgers"
+  ],
+  "name": "Kraken Trades",
+  "idx": 195
+ },
+ {
+  "header": [
+   "oid",
+   "symbol",
+   "dealPrice",
+   "dealValue",
+   "amount",
+   "fee",
+   "direction",
+   "createdDate",
+   ""
+  ],
+  "name": "KuCoin Trades",
+  "idx": 196
+ },
+ {
+  "header": [
+   "tradeCreatedAt",
+   "orderId",
+   "symbol",
+   "side",
+   "price",
+   "size",
+   "funds",
+   "fee",
+   "liquidity",
+   "feeCurrency",
+   "orderType",
+   ""
+  ],
+  "name": "KuCoin Trades",
+  "idx": 197
+ },
+ {
+  "header": [
+   "tradeCreatedAt",
+   "orderId",
+   "symbol",
+   "side",
+   "price",
+   "size",
+   "funds",
+   "fee",
+   "liquidity",
+   "feeCurrency",
+   "orderType"
+  ],
+  "name": "KuCoin Trades",
+  "idx": 198
+ },
+ {
+  "header": [
+   "uid",
+   "symbol",
+   "order_type",
+   "price",
+   "amount_coin",
+   "direction",
+   "funds",
+   "fee",
+   "created_at"
+  ],
+  "name": "KuCoin Trades",
+  "idx": 199
+ },
+ {
+  "header": [
+   "uid",
+   "symbol",
+   "direction",
+   "deal_price",
+   "amount",
+   "deal_value",
+   "created_at"
+  ],
+  "name": "KuCoin Trades",
+  "idx": 200
+ },
+ {
+  "header": [
+   "Time",
+   "Coin",
+   "Network",
+   "Amount",
+   "Type",
+   "Remark",
+   "Fee"
+  ],
+  "name": "KuCoin Deposits",
+  "idx": 201
+ },
+ {
+  "header": [
+   "Time",
+   "Coin",
+   "Amount",
+   "Type",
+   "Remark"
+  ],
+  "name": "KuCoin Deposits",
+  "idx": 202
+ },
+ {
+  "header": [
+   "Time",
+   "Coin",
+   "Network",
+   "Amount",
+   "Type",
+   "Wallet Address/Account",
+   "Remark"
+  ],
+  "name": "KuCoin Withdrawals",
+  "idx": 203
+ },
+ {
+  "header": [
+   "Time",
+   "Coin",
+   "Amount",
+   "Type",
+   "Wallet Address",
+   "Remark"
+  ],
+  "name": "KuCoin Withdrawals",
+  "idx": 204
+ },
+ {
+  "header": [
+   "coin_type",
+   "type",
+   "add",
+   "hash",
+   "vol",
+   "created_at"
+  ],
+  "name": "KuCoin Deposits/Withdrawals",
+  "idx": 205
+ },
+ {
+  "header": [
+   "UID",
+   "Account Type",
+   "",
+   "Coin",
+   "Amount",
+   "Fee",
+   "Transfer Network",
+   "Status",
+   "Remarks"
+  ],
+  "name": null,
+  "idx": -1
+ },
+ {
+  "header": [
+   "UID",
+   "Account Type",
+   "",
+   "Coin",
+   "Amount",
+   "Fee",
+   "Hash",
+   "Deposit Address",
+   "Transfer Network",
+   "Status",
+   "Remarks"
+  ],
+  "name": null,
+  "idx": -1
+ },
+ {
+  "header": [
+   "UID",
+   "Account Type",
+   "",
+   "Remarks",
+   "Status",
+   "Fee",
+   "Amount",
+   "Coin",
+   "Transfer Network"
+  ],
+  "name": null,
+  "idx": -1
+ },
+ {
+  "header": [
+   "UID",
+   "Account Type",
+   "",
+   "Coin",
+   "Amount",
+   "Fee",
+   "Withdrawal Address/Account",
+   "Transfer Network",
+   "Status",
+   "Remarks"
+  ],
+  "name": null,
+  "idx": -1
+ },
+ {
+  "header": [
+   "UID",
+   "Account Type",
+   "",
+   "Coin",
+   "Amount",
+   "Fee",
+   "Hash",
+   "Withdrawal Address/Account",
+   "Transfer Network",
+   "Status",
+   "Remarks"
+  ],
+  "name": null,
+  "idx": -1
+ },
+ {
+  "header": [
+   "UID",
+   "Account Type",
+   "Time",
+   "Coin",
+   "Amount",
+   "Fee",
+   "Withdrawal Address/Account",
+   "Transfer Network",
+   "Status",
+   "Remarks"
+  ],
+  "name": "KuCoin Withdrawals",
+  "idx": 211
+ },
+ {
+  "header": [
+   "UID",
+   "Account Type",
+   "",
+   "Remarks",
+   "Status",
+   "Fee",
+   "Amount",
+   "Coin",
+   "Transfer Network",
+   "Withdrawal Address/Account"
+  ],
+  "name": null,
+  "idx": -1
+ },
+ {
+  "header": [
+   "UID",
+   "Account Type",
+   "Order ID",
+   "",
+   "Staked Coin",
+   "Product Type",
+   "Product Name",
+   "Earnings Coin",
+   "Earnings Type",
+   "Remarks",
+   "Amount",
+   "Amount（USDT）",
+   "Fee"
+  ],
+  "name": null,
+  "idx": -1
+ },
+ {
+  "header": [
+   "UID",
+   "Account Type",
+   "Symbol",
+   "Close Type",
+   "Realized PNL",
+   "Total Realized PNL",
+   "Total Funding Fees",
+   "Total Trading Fees",
+   "",
+   ""
+  ],
+  "name": null,
+  "idx": -1
+ },
+ {
+  "header": [
+   "UID",
+   "Account Type",
+   "Currency",
+   "Side",
+   "Amount",
+   "Fee",
+   "",
+   "Remark",
+   "Type"
+  ],
+  "name": null,
+  "idx": -1
+ },
+ {
+  "header": [
+   "UID",
+   "Account Type",
+   "Currency",
+   "Side",
+   "Amount",
+   "Fee",
+   "",
+   "Remark"
+  ],
+  "name": null,
+  "idx": -1
+ },
+ {
+  "header": [
+   "UID",
+   "Account Type",
+   "Order ID",
+   "Symbol",
+   "Side",
+   "Order Type",
+   "Avg. Filled Price",
+   "Filled Amount",
+   "Filled Volume",
+   "Filled Volume (USDT)",
+   "",
+   "Fee",
+   "Tax",
+   "Maker/Taker",
+   "Fee Currency"
+  ],
+  "name": null,
+  "idx": -1
+ },
+ {
+  "header": [
+   "UID",
+   "Account Type",
+   "Order ID",
+   "Symbol",
+   "Side",
+   "Order Type",
+   "Avg. Filled Price",
+   "Filled Amount",
+   "Filled Volume",
+   "Filled Volume (USDT)",
+   "",
+   "Fee",
+   "Tax",
+   "Maker/Taker",
+   "Fee Currency",
+   "Account Mode"
+  ],
+  "name": null,
+  "idx": -1
+ },
+ {
+  "header": [
+   "UID",
+   "Account Type",
+   "Order ID",
+   "Symbol",
+   "Side",
+   "Order Type",
+   "Avg. Filled Price",
+   "Filled Amount",
+   "Filled Volume",
+   "Filled Volume (USDT)",
+   "Filled Time",
+   "Fee",
+   "Tax",
+   "Maker/Taker",
+   "Fee Currency"
+  ],
+  "name": "KuCoin Trades",
+  "idx": 219
+ },
+ {
+  "header": [
+   "UID",
+   "Account Type",
+   "Order ID",
+   "",
+   "Symbol",
+   "Side",
+   "Order Type",
+   "Order Price",
+   "Order Amount",
+   "Avg. Filled Price",
+   "Filled Amount",
+   "Filled Volume",
+   "Filled Volume (USDT)",
+   "",
+   "Fee",
+   "Fee Currency",
+   "Tax",
+   "Status"
+  ],
+  "name": null,
+  "idx": -1
+ },
+ {
+  "header": [
+   "UID",
+   "Account Type",
+   "Order ID",
+   "",
+   "Symbol",
+   "Side",
+   "Order Type",
+   "Order Price",
+   "Order Amount",
+   "Avg. Filled Price",
+   "Filled Amount",
+   "Filled Volume",
+   "Filled Volume (USDT)",
+   "",
+   "Fee",
+   "Fee Currency",
+   "Tax",
+   "Status",
+   "Account Mode"
+  ],
+  "name": null,
+  "idx": -1
+ },
+ {
+  "header": [
+   "UID",
+   "Account Type",
+   "Order ID",
+   "",
+   "Symbol",
+   "Side",
+   "Order Type",
+   "Order Price",
+   "Order Amount",
+   "Avg. Filled Price",
+   "Filled Amount",
+   "Filled Volume",
+   "Filled Volume (USDT)",
+   "",
+   "Fee",
+   "Fee Currency",
+   "Status"
+  ],
+  "name": null,
+  "idx": -1
+ },
+ {
+  "header": [
+   "Order ID",
+   "Order Type",
+   "Currency (Crypto)",
+   "Crypto Quantity,",
+   "Price",
+   "Currency (Fiat)",
+   "Fiat Amount",
+   "Fee Currency",
+   "Fee",
+   "Status",
+   ""
+  ],
+  "name": null,
+  "idx": -1
+ },
+ {
+  "header": [
+   "Order ID",
+   "Currency (Crypto)",
+   "Crypto Quantity",
+   "Currency (Fiat)",
+   "Fiat Amount",
+   "Fee Currency (Fiat)",
+   "Fee (Fiat)",
+   "Fee Currency (Crypto)",
+   "Fee (Crypto)",
+   "Payment Method",
+   "Status",
+   ""
+  ],
+  "name": null,
+  "idx": -1
+ },
+ {
+  "header": [
+   "Order ID",
+   "Currency (Fiat)",
+   "Fiat Amount",
+   "Fee",
+   "Deposit Method",
+   "Status",
+   ""
+  ],
+  "name": null,
+  "idx": -1
+ },
+ {
+  "header": [
+   "UID",
+   "Account Type",
+   "Payment Account",
+   "Sell",
+   "Buy",
+   "Price",
+   "Tax",
+   "",
+   "Status"
+  ],
+  "name": null,
+  "idx": -1
+ },
+ {
+  "header": [
+   "ID",
+   "Time",
+   "Token",
+   "Initial Quantity",
+   "Latest Quantity",
+   "Quantity",
+   "Type",
+   "Details",
+   "Remarks"
+  ],
+  "name": "LBank Deposits",
+  "idx": 227
+ },
+ {
+  "header": [
+   "ID",
+   "Method",
+   "Type",
+   "Pair",
+   "Time",
+   "Direction",
+   "Average Price",
+   "Volume",
+   "Turnover",
+   "Transaction Fee Rate",
+   "Transaction Fee",
+   "Remarks"
+  ],
+  "name": "LBank Trades",
+  "idx": 228
+ },
+ {
+  "header": [
+   "Operation Date",
+   "Status",
+   "Currency Ticker",
+   "Operation Type",
+   "Operation Amount",
+   "Operation Fees",
+   "Operation Hash",
+   "Account Name",
+   "Account xpub",
+   "Countervalue Ticker",
+   "Countervalue at Operation Date",
+   "Countervalue at CSV Export"
+  ],
+  "name": "Ledger Live",
+  "idx": 229
+ },
+ {
+  "header": [
+   "Operation Date",
+   "Currency Ticker",
+   "Operation Type",
+   "Operation Amount",
+   "Operation Fees",
+   "Operation Hash",
+   "Account Name",
+   "Account xpub",
+   "Countervalue Ticker",
+   "Countervalue at Operation Date",
+   "Countervalue at CSV Export"
+  ],
+  "name": "Ledger Live",
+  "idx": 230
+ },
+ {
+  "header": [
+   "Operation Date",
+   "Currency Ticker",
+   "Operation Type",
+   "Operation Amount",
+   "Operation Fees",
+   "Operation Hash",
+   "Account Name",
+   "Account xpub"
+  ],
+  "name": "Ledger Live",
+  "idx": 231
+ },
+ {
+  "header": [
+   "Operation Date",
+   "Currency Ticker",
+   "Operation Type",
+   "Operation Amount",
+   "Operation Fees",
+   "Operation Hash",
+   "Account Name",
+   "Account id"
+  ],
+  "name": "Ledger Live",
+  "idx": 232
+ },
+ {
+  "header": [
+   "Quote Currency",
+   "Base Currency",
+   "Execution Id",
+   "Type",
+   "Date",
+   "Open Qty",
+   "Price",
+   "Fee",
+   "Fee Currency",
+   "Amount"
+  ],
+  "name": "Liquid Trades",
+  "idx": 233
+ },
+ {
+  "header": [
+   "MX Transaction Id",
+   "NT Transaction Id",
+   "Withdraw addr",
+   "Type",
+   "Currency",
+   "Pair",
+   "Fee",
+   "Amount",
+   "Price",
+   "Total",
+   "Action",
+   "From",
+   "To",
+   "Time"
+  ],
+  "name": "Mercatox",
+  "idx": 234
+ },
+ {
+  "header": [
+   "UID",
+   "Status",
+   "Time",
+   "Crypto",
+   "Network",
+   "Deposit Amount",
+   "TxID",
+   "Progress"
+  ],
+  "name": "MEXC Deposits",
+  "idx": 235
+ },
+ {
+  "header": [
+   "Status",
+   "Time",
+   "Crypto",
+   "Network",
+   "Deposit Amount",
+   "TxID",
+   "Progress"
+  ],
+  "name": "MEXC Deposits",
+  "idx": 236
+ },
+ {
+  "header": [
+   "UID",
+   "Status",
+   "Time",
+   "Crypto",
+   "Network",
+   "Request Amount",
+   "Withdrawal Address",
+   "memo",
+   "TxID",
+   "Trading Fee",
+   "Settlement Amount",
+   "Withdrawal Descriptions"
+  ],
+  "name": "MEXC Withdrawals",
+  "idx": 237
+ },
+ {
+  "header": [
+   "Status",
+   "Time",
+   "Crypto",
+   "Network",
+   "Request Amount",
+   "Withdrawal Address",
+   "TxID",
+   "Trading Fee",
+   "Settlement Amount",
+   "Withdrawal Descriptions"
+  ],
+  "name": "MEXC Withdrawals",
+  "idx": 238
+ },
+ {
+  "header": [
+   "UID",
+   "Pairs",
+   "Time",
+   "Type",
+   "Direction",
+   "Average Filled Price",
+   "Order Price",
+   "Filled Quantity",
+   "Order Quantity",
+   "Order Amount",
+   "Status"
+  ],
+  "name": "MEXC Trades",
+  "idx": 239
+ },
+ {
+  "header": [
+   "Pairs",
+   "Time",
+   "Type",
+   "Direction",
+   "Average Filled Price",
+   "Order Price",
+   "Filled Quantity",
+   "Order Quantity",
+   "Order Amount",
+   "Status"
+  ],
+  "name": "MEXC Trades",
+  "idx": 240
+ },
+ {
+  "header": [
+   "UID",
+   "Pairs",
+   "Time",
+   "Side",
+   "Filled Price",
+   "Executed Amount",
+   "Total",
+   "Fee",
+   "Role"
+  ],
+  "name": "MEXC Trades",
+  "idx": 241
+ },
+ {
+  "header": [
+   "Pairs",
+   "Time",
+   "Side",
+   "Filled Price",
+   "Executed Amount",
+   "Total",
+   "Fee",
+   "Role"
+  ],
+  "name": "MEXC Trades",
+  "idx": 242
+ },
+ {
+  "header": [
+   "UID",
+   "",
+   "Futures Trading Pair",
+   "Direction",
+   "Leverage",
+   "Order Type",
+   "Order Qty (Cont.)",
+   "Filled Qty (Cont.)",
+   "Order Qty (Crypto)",
+   "Filled Qty (Crypto)",
+   "Order Qty (Amount)",
+   "Filled Qty (Amount)",
+   "Order Price",
+   "Average Filled Price",
+   "Closing PNL",
+   "Trading Fee",
+   "Fee-payment Crypto",
+   "Status"
+  ],
+  "name": null,
+  "idx": -1
+ },
+ {
+  "header": [
+   "",
+   "Futures Trading Pair",
+   "Direction",
+   "Leverage",
+   "Order Type",
+   "Order Qty (Cont.)",
+   "Filled Qty (Cont.)",
+   "Order Qty (Crypto)",
+   "Filled Qty (Crypto)",
+   "Order Qty (Amount)",
+   "Filled Qty (Amount)",
+   "Order Price",
+   "Average Filled Price",
+   "Closing PNL",
+   "Trading Fee",
+   "Fee-payment Crypto",
+   "Status"
+  ],
+  "name": null,
+  "idx": -1
+ },
+ {
+  "header": [
+   "date",
+   "amount",
+   "status",
+   "tx id",
+   "payment_id"
+  ],
+  "name": "MyMonero",
+  "idx": 245
+ },
+ {
+  "header": [
+   "account",
+   "type",
+   "amount",
+   "hash",
+   "height",
+   "time"
+  ],
+  "name": "Nault",
+  "idx": 246
+ },
+ {
+  "header": [
+   "to",
+   "from",
+   "txid",
+   "time",
+   "amount",
+   "symbol",
+   "type",
+   "id"
+  ],
+  "name": "Neon Wallet",
+  "idx": 247
+ },
+ {
+  "header": [
+   "Transaction",
+   "Type",
+   "Currency",
+   "Amount",
+   "USD Equivalent",
+   "Details",
+   "Outstanding Loan",
+   "Date / Time"
+  ],
+  "name": "Nexo",
+  "idx": 248
+ },
+ {
+  "header": [
+   "Transaction",
+   "Type",
+   "Currency",
+   "Amount",
+   "Details",
+   "Outstanding Loan",
+   "Date / Time"
+  ],
+  "name": "Nexo",
+  "idx": 249
+ },
+ {
+  "header": [
+   "Transaction",
+   "Type",
+   "Input Currency",
+   "Input Amount",
+   "Output Currency",
+   "Output Amount",
+   "USD Equivalent",
+   "Details",
+   "Outstanding Loan",
+   "Date / Time"
+  ],
+  "name": "Nexo",
+  "idx": 250
+ },
+ {
+  "header": [
+   "Transaction",
+   "Type",
+   "Input Currency",
+   "Input Amount",
+   "Output Currency",
+   "Output Amount",
+   "USD Equivalent",
+   "Details",
+   ""
+  ],
+  "name": null,
+  "idx": -1
+ },
+ {
+  "header": [
+   "Transaction",
+   "Type",
+   "Input Currency",
+   "Input Amount",
+   "Output Currency",
+   "Output Amount",
+   "USD Equivalent",
+   "Fee",
+   "Fee Currency",
+   "Details",
+   "Date / Time (UTC)"
+  ],
+  "name": "Nexo",
+  "idx": 252
+ },
+ {
+  "header": [
+   "Transaction",
+   "Type",
+   "Input Currency",
+   "Input Amount",
+   "Output Currency",
+   "Output Amount",
+   "USD Equivalent",
+   "Fee",
+   "Fee Currency",
+   "Details",
+   "Date / Time (UTC)",
+   "normalizedDisplayDetails"
+  ],
+  "name": "Nexo",
+  "idx": 253
+ },
+ {
+  "header": [
+   "",
+   "Order id",
+   "Time",
+   "Trade Type",
+   "Instrument",
+   "Type",
+   "Amount",
+   "Unit",
+   "PL",
+   "Fee",
+   "Position Change",
+   "Position Balance",
+   "Balance Change",
+   "Balance",
+   "Unit"
+  ],
+  "name": "OKX Trades",
+  "idx": 254
+ },
+ {
+  "header": [
+   "time",
+   "type",
+   "size",
+   "balance",
+   "fee",
+   "currency"
+  ],
+  "name": "OKX Trades",
+  "idx": 255
+ },
+ {
+  "header": [
+   "",
+   "Time",
+   "Type",
+   "Amount",
+   "Before Balance",
+   "After Balance",
+   "Fee",
+   "Symbol"
+  ],
+  "name": "OKX Funding",
+  "idx": 256
+ },
+ {
+  "header": [
+   "",
+   "",
+   "Time",
+   "Type",
+   "Amount",
+   "Before Balance",
+   "After Balance",
+   "Fee",
+   "Symbol"
+  ],
+  "name": "OKX Funding",
+  "idx": 257
+ },
+ {
+  "header": [
+   "type",
+   "amount",
+   "currency",
+   "crypto_amount",
+   "crypto_currency",
+   "balance_usd",
+   "balance_crypto",
+   "sent_to",
+   "transaction_id",
+   "trade_hash",
+   "sent_to_user",
+   "received_from_user",
+   "time"
+  ],
+  "name": "Paxful",
+  "idx": 258
+ },
+ {
+  "header": [
+   "DateTime",
+   "Transaction Type",
+   "Asset In (Quantity)",
+   "Asset In (Currency)",
+   "Asset Out (Quantity)",
+   "Asset Out (Currency)",
+   "Transaction Fee (Quantity)",
+   "Transaction Fee (Currency)",
+   ""
+  ],
+  "name": null,
+  "idx": -1
+ },
+ {
+  "header": [
+   "Date",
+   "Market",
+   "Category",
+   "Type",
+   "Price",
+   "Amount",
+   "Total",
+   "Fee",
+   "Order Number",
+   "Base Total Less Fee",
+   "Quote Total Less Fee",
+   "Fee Currency",
+   "Fee Total"
+  ],
+  "name": "Poloniex Trades",
+  "idx": 260
+ },
+ {
+  "header": [
+   "Date",
+   "Market",
+   "Category",
+   "Type",
+   "Price",
+   "Amount",
+   "Total",
+   "Fee",
+   "Order Number",
+   "Base Total Less Fee",
+   "Quote Total Less Fee"
+  ],
+  "name": "Poloniex Trades",
+  "idx": 261
+ },
+ {
+  "header": [
+   "Date",
+   "Currency",
+   "Amount",
+   "Address",
+   "Status"
+  ],
+  "name": "Poloniex Deposits",
+  "idx": 262
+ },
+ {
+  "header": [
+   "Date",
+   "Currency",
+   "Amount",
+   "Fee Deducted",
+   "Amount - Fee",
+   "Address",
+   "Status"
+  ],
+  "name": "Poloniex Withdrawals",
+  "idx": 263
+ },
+ {
+  "header": [
+   "date",
+   "currency",
+   "amount",
+   "wallet"
+  ],
+  "name": "Poloniex Distributions",
+  "idx": 264
+ },
+ {
+  "header": [
+   "Order ID",
+   "Type",
+   "Market Currency",
+   "Base Currency",
+   "Trade ID",
+   "Market Amount",
+   "Base Amount",
+   "Price",
+   "Taker",
+   "Base Fee",
+   "Creation Date"
+  ],
+  "name": "qTrade Trades",
+  "idx": 265
+ },
+ {
+  "header": [
+   "Confirmed",
+   "Date",
+   "Type",
+   "Label",
+   "Address",
+   "",
+   "ID"
+  ],
+  "name": null,
+  "idx": -1
+ },
+ {
+  "header": [
+   "Confirmed",
+   "Date",
+   "Type",
+   "Label",
+   "Address",
+   "Amount",
+   "ID"
+  ],
+  "name": "Qt Wallet (i.e. Bitcoin Core, etc)",
+  "idx": 267
+ },
+ {
+  "header": [
+   "Transaction",
+   "Block",
+   "Date/Time",
+   "Type",
+   "Amount",
+   "Total"
+  ],
+  "name": "Qt Wallet (i.e. Bitcoin Core, etc)",
+  "idx": 268
+ },
+ {
+  "header": [
+   "Symbol",
+   "Type",
+   "Quantity",
+   "Price",
+   "Value",
+   "Fees",
+   "Date"
+  ],
+  "name": "Revolut",
+  "idx": 269
+ },
+ {
+  "header": [
+   "UUID",
+   "Time Entered",
+   "Symbol",
+   "Side",
+   "Quantity",
+   "State",
+   "Order Type",
+   "Leaves Quantity",
+   "Entered Price",
+   "Average Price",
+   "Notional"
+  ],
+  "name": "Robinhood Trades",
+  "idx": 270
+ },
+ {
+  "header": [
+   "id",
+   "created_at",
+   "withdrawal_submitted_timestamp",
+   "currency_code",
+   "transfer_type",
+   "amount",
+   "network",
+   "network_fee",
+   "native_network_fee",
+   "usd_amount_at_request",
+   "fiat_amount_at_request",
+   "state",
+   "to_address",
+   "address_tag",
+   "blockchain_txn_id",
+   "blockchain_txn_state"
+  ],
+  "name": "Robinhood Deposits/Withdrawals",
+  "idx": 271
+ },
+ {
+  "header": [
+   "id",
+   "Transaction Hash",
+   "Date",
+   "Action",
+   "Quantity",
+   "Target Currency",
+   "Price",
+   "Source Currency",
+   "Fees",
+   "Memo",
+   "Status",
+   "Balance",
+   "Trader",
+   "Timestamp"
+  ],
+  "name": "sFOX",
+  "idx": 272
+ },
+ {
+  "header": [
+   "OrderId",
+   "OrderDate",
+   "AddedByUserEmail",
+   "Action",
+   "AssetPair",
+   "Quantity",
+   "Asset",
+   "AssetUSDFXRate",
+   "UnitPrice",
+   "PriceCurrency",
+   "PrincipalAmount",
+   "PriceUSDFXRate",
+   "PrincipalAmountUSD",
+   "Fees",
+   "FeesUSD",
+   "Total",
+   "TotalUSD"
+  ],
+  "name": "sFOX",
+  "idx": 273
+ },
+ {
+  "header": [
+   "Transaction Hash",
+   "Blockno",
+   "UnixTimestamp",
+   "DateTime (UTC)",
+   "From",
+   "To",
+   "ContractAddress",
+   "Value_IN(ETH)",
+   "Value_OUT(ETH)",
+   "CurrentValue/Eth",
+   "TxnFee(ETH)",
+   "TxnFee(USD)",
+   "Historical $Price/Eth",
+   "Status",
+   "ErrCode",
+   "Method",
+   "ChainId",
+   "Chain",
+   "Value(ETH)"
+  ],
+  "name": "Snowtrace (Transactions)",
+  "idx": 274
+ },
+ {
+  "header": [
+   "Transaction Hash",
+   "Blockno",
+   "UnixTimestamp",
+   "DateTime (UTC)",
+   "From",
+   "To",
+   "ContractAddress",
+   "Value_IN(ETH)",
+   "Value_OUT(ETH)",
+   "CurrentValue/Eth",
+   "TxnFee(ETH)",
+   "TxnFee(USD)",
+   "Historical $Price/Eth",
+   "Status",
+   "ErrCode",
+   "Method",
+   "ChainId",
+   "Chain",
+   "Value(ETH)",
+   "PrivateNote"
+  ],
+  "name": "Snowtrace (Transactions)",
+  "idx": 275
+ },
+ {
+  "header": [
+   "chain_id",
+   "tx_hash",
+   "block_number",
+   "block_unix_timestamp",
+   "block_datetime",
+   "from",
+   "to",
+   "token_value",
+   "token_address",
+   "token_name",
+   "token_symbol"
+  ],
+  "name": "Snowtrace (Token Transfers ERC-20)",
+  "idx": 276
+ },
+ {
+  "header": [
+   "timestamp",
+   "tx_type",
+   "received_amount",
+   "received_currency",
+   "sent_amount",
+   "sent_currency",
+   "fee",
+   "fee_currency",
+   "comment",
+   "txid",
+   "url",
+   "exchange",
+   "wallet_address"
+  ],
+  "name": "StakeTax",
+  "idx": 277
+ },
+ {
+  "header": [
+   "Type",
+   "Buy Quantity",
+   "Buy Asset",
+   "Buy Value",
+   "Sell Quantity",
+   "Sell Asset",
+   "Sell Value",
+   "Fee Quantity",
+   "Fee Asset",
+   "Fee Value",
+   "Wallet",
+   "Timestamp",
+   "Note",
+   "Tx ID",
+   "URL",
+   "Raw Data"
+  ],
+  "name": "StakeTax",
+  "idx": 278
+ },
+ {
+  "header": [
+   "Extrinsic ID",
+   "Block",
+   "Block Timestamp",
+   "From",
+   "To",
+   "Value",
+   "Symbol",
+   "Result",
+   "Hash"
+  ],
+  "name": "Subscan Transfers",
+  "idx": 279
+ },
+ {
+  "header": [
+   "Extrinsic ID",
+   "Date",
+   "Block",
+   "Hash",
+   "Symbol",
+   "From",
+   "To",
+   "Value",
+   "Result"
+  ],
+  "name": "Subscan Transfers",
+  "idx": 280
+ },
+ {
+  "header": [
+   "Event ID",
+   "Block",
+   "Extrinsic ID",
+   "Pool",
+   "Pool",
+   "Value",
+   "Action",
+   "Time"
+  ],
+  "name": "Subscan Pool Paidout",
+  "idx": 281
+ },
+ {
+  "header": [
+   "Event ID",
+   "Extrinsic ID",
+   "Pool",
+   "Value",
+   "Action",
+   "Time"
+  ],
+  "name": "Subscan Pool Paidout",
+  "idx": 282
+ },
+ {
+  "header": [
+   "Local time",
+   "Time in UTC",
+   "Type",
+   "Currency",
+   "Gross amount",
+   "",
+   "Fee",
+   "",
+   "Net amount",
+   "",
+   "Note"
+  ],
+  "name": null,
+  "idx": -1
+ },
+ {
+  "header": [
+   "Date",
+   "Coin",
+   "TXID",
+   "Amount"
+  ],
+  "name": "TradeOgre Deposits",
+  "idx": 284
+ },
+ {
+  "header": [
+   "Date",
+   "Coin",
+   "TXID",
+   "Amount",
+   "Fee",
+   "Address",
+   "Payment ID"
+  ],
+  "name": "TradeOgre Withdrawals",
+  "idx": 285
+ },
+ {
+  "header": [
+   "Type",
+   "Exchange",
+   "Date",
+   "Amount",
+   "Price",
+   "Fee"
+  ],
+  "name": "TradeOgre Trades",
+  "idx": 286
+ },
+ {
+  "header": [
+   "TimeStamp",
+   "Currency",
+   "Symbol",
+   "Amount",
+   "Confirmation",
+   "TxId"
+  ],
+  "name": "TradeSatoshi Deposits",
+  "idx": 287
+ },
+ {
+  "header": [
+   "Id",
+   "Currency",
+   "Symbol",
+   "Amount",
+   "Status",
+   "Confirmations",
+   "TxId",
+   "TimeStamp"
+  ],
+  "name": "TradeSatoshi Deposits",
+  "idx": 288
+ },
+ {
+  "header": [
+   "TimeStamp",
+   "Currency",
+   "Symbol",
+   "Amount",
+   "Confirmation",
+   "TxId",
+   "Address",
+   "PaymentId",
+   "Status"
+  ],
+  "name": "TradeSatoshi Withdrawals",
+  "idx": 289
+ },
+ {
+  "header": [
+   "Id",
+   "User",
+   "Symbol",
+   "Amount",
+   "Fee",
+   "Net Amount",
+   "Status",
+   "Confirmations",
+   "TxId",
+   "Address",
+   "TimeStamp"
+  ],
+  "name": "TradeSatoshi Withdrawals",
+  "idx": 290
+ },
+ {
+  "header": [
+   "Id",
+   "TradePair",
+   "",
+   "Amount",
+   "Rate",
+   "Fee",
+   "",
+   "IsApi"
+  ],
+  "name": null,
+  "idx": -1
+ },
+ {
+  "header": [
+   "Date",
+   "Time",
+   "TX id",
+   "Address",
+   "Address Label",
+   "TX type",
+   "Value",
+   "TX total",
+   "Balance"
+  ],
+  "name": "Trezor",
+  "idx": 292
+ },
+ {
+  "header": [
+   "Date",
+   "Time",
+   "TX id",
+   "Address",
+   "TX type",
+   "Value",
+   "TX total",
+   "Balance"
+  ],
+  "name": "Trezor",
+  "idx": 293
+ },
+ {
+  "header": [
+   "Timestamp",
+   "Date",
+   "Time",
+   "Type",
+   "Transaction ID",
+   "Fee",
+   "Fee unit",
+   "Address",
+   "Label",
+   "Amount",
+   "Amount unit",
+   "",
+   "Other"
+  ],
+  "name": null,
+  "idx": -1
+ },
+ {
+  "header": [
+   "Date & Time",
+   "Type",
+   "Transaction ID",
+   "Addresses",
+   "Fee",
+   "Total"
+  ],
+  "name": "Trezor Suite",
+  "idx": 295
+ },
+ {
+  "header": [
+   "Date",
+   "Destination",
+   "Destination Amount",
+   "Destination Currency",
+   "Fee Amount",
+   "Fee Currency",
+   "Id",
+   "Origin",
+   "Origin Amount",
+   "Origin Currency",
+   "Status",
+   "Type"
+  ],
+  "name": "Uphold",
+  "idx": 296
+ },
+ {
+  "header": [
+   "date",
+   "id",
+   "type",
+   "",
+   "",
+   "pair",
+   "rate",
+   "origin_currency",
+   "origin_amount",
+   "origin_commission",
+   "destination_currency",
+   "destination_amount",
+   "destination_commission"
+  ],
+  "name": null,
+  "idx": -1
+ },
+ {
+  "header": [
+   "time",
+   "status",
+   "address",
+   "amount",
+   "fee",
+   "txid"
+  ],
+  "name": "Volt",
+  "idx": 298
+ },
+ {
+  "header": [
+   "time",
+   "status",
+   "address",
+   "amount",
+   "fee",
+   "txid",
+   ""
+  ],
+  "name": "Volt",
+  "idx": 299
+ },
+ {
+  "header": [
+   "time",
+   "status",
+   "address",
+   "amount",
+   "txid"
+  ],
+  "name": "Volt",
+  "idx": 300
+ },
+ {
+  "header": [
+   "time",
+   "status",
+   "address",
+   "amount",
+   "txid",
+   ""
+  ],
+  "name": "Volt",
+  "idx": 301
+ },
+ {
+  "header": [
+   "Timestamp (UTC)",
+   "Type",
+   "Internal Id",
+   "Platform",
+   "Platform Id",
+   "Blockchain Id",
+   "Record Type",
+   "Asset",
+   "Amount",
+   "Description"
+  ],
+  "name": "Voyager",
+  "idx": 302
+ },
+ {
+  "header": [
+   "transaction_date",
+   "transaction_id",
+   "transaction_direction",
+   "transaction_type",
+   "base_asset",
+   "quote_asset",
+   "quantity",
+   "net_amount",
+   "price"
+  ],
+  "name": "Voyager",
+  "idx": 303
+ },
+ {
+  "header": [
+   "Id",
+   "Currency",
+   "Address",
+   "Hash",
+   "Amount",
+   "Fee",
+   "Status",
+   "Created At",
+   "Updated At"
+  ],
+  "name": "WhiteBIT Deposits",
+  "idx": 304
+ },
+ {
+  "header": [
+   "Id",
+   "Currency",
+   "Address",
+   "Hash",
+   "Requested Amount",
+   "Requested Fee",
+   "Processed Amount",
+   "Processed Fee",
+   "Status",
+   "Created At",
+   "Updated At"
+  ],
+  "name": "WhiteBIT Withdrawals",
+  "idx": 305
+ },
+ {
+  "header": [
+   "Id",
+   "Market",
+   "Type",
+   "Side",
+   "Trigger Market",
+   "Trigger Condition",
+   "Trigger Price",
+   "Amount",
+   "Price",
+   "Fee",
+   "Revenue",
+   "Completed",
+   "Total",
+   "Open",
+   "Close"
+  ],
+  "name": "WhiteBIT Trades",
+  "idx": 306
+ },
+ {
+  "header": [
+   "#",
+   "",
+   "Time",
+   "Amount",
+   "Available"
+  ],
+  "name": "Wirex",
+  "idx": 307
+ },
+ {
+  "header": [
+   "Type (Trade, IN or OUT)",
+   "Buy Amount",
+   "Buy Cur.",
+   "Sell Amount",
+   "Sell Cur.",
+   "Fee Amount (optional)",
+   "Fee Cur. (optional)",
+   "Exchange (optional)",
+   "Trade Group (optional)",
+   "Comment (optional)",
+   "Date",
+   "ID"
+  ],
+  "name": "Yoroi",
+  "idx": 308
+ },
+ {
+  "header": [
+   "Type (Trade, IN or OUT)",
+   "Buy Amount",
+   "Buy Cur.",
+   "Sell Amount",
+   "Sell Cur.",
+   "Fee Amount (optional)",
+   "Fee Cur. (optional)",
+   "Exchange (optional)",
+   "Trade Group (optional)",
+   "Comment (optional)",
+   "Date"
+  ],
+  "name": "Yoroi",
+  "idx": 309
+ },
+ {
+  "header": [
+   "txid",
+   "formattedDate",
+   "timestamp",
+   "direction",
+   "amount",
+   "chainid",
+   "destinationchainid",
+   "isError",
+   "type",
+   "asset",
+   "swapTokenIn",
+   "swapTokenOut"
+  ],
+  "name": "Zelcore Kadena",
+  "idx": 310
+ },
+ {
+  "header": [
+   "Date",
+   "Time",
+   "Transaction Type",
+   "Status",
+   "Application",
+   "Accounting Type",
+   "Buy Amount",
+   "Buy Currency",
+   "Buy Currency Address",
+   "Buy Fiat Amount",
+   "Buy Fiat Currency",
+   "Sell Amount",
+   "Sell Currency",
+   "Sell Currency Address",
+   "Sell Fiat Amount",
+   "Sell Fiat Currency",
+   "Fee Amount",
+   "Fee Currency",
+   "Fee Fiat Amount",
+   "Fee Fiat Currency",
+   "Sender",
+   "Receiver",
+   "Tx Hash",
+   "Link",
+   "Timestamp",
+   "Changes JSON"
+  ],
+  "name": "Zerion (ETH Transactions)",
+  "idx": 311
+ }
+]

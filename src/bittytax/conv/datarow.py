@@ -3,7 +3,7 @@
 
 import datetime
 from dataclasses import dataclass
-from typing import List, Optional
+from typing import Dict, List, Optional
 
 from colorama import Back, Fore
 from typing_extensions import Unpack
@@ -11,10 +11,20 @@ from typing_extensions import Unpack
 from ..config import config
 from ..constants import TZ_UTC
 from .dataparser import DataParser, ParserArgs
-from .exceptions import DataRowError
+from .exceptions import DataRowError, MissingColumnError
 from .out_record import TransactionOutRecord
 
 DEFAULT_TIMESTAMP = datetime.datetime(datetime.MAXYEAR, 1, 1, tzinfo=TZ_UTC)
+
+
+class RowDict(Dict[str, str]):
+    # Maps column name -> cell value for one row. A missing key means a row handler asked for a
+    # column not present in this file's header. Raise a DataRowError (caught by DataRow.parse and
+    # recorded as a single failed row) rather than a bare KeyError, which was uncaught and aborted
+    # the whole conversion. __contains__ / get() are deliberately NOT overridden, so optional-column
+    # probes ("X" in row_dict, row_dict.get("X")) keep working exactly as before.
+    def __missing__(self, key: str) -> str:
+        raise MissingColumnError(-1, key)
 
 
 @dataclass
@@ -30,7 +40,7 @@ class DataRow:
     ) -> None:
         self.line_num = line_num
         self.row = row
-        self.row_dict = dict(zip(in_header, row))
+        self.row_dict = RowDict(zip(in_header, row))
         self.timestamp = DEFAULT_TIMESTAMP
         self.t_record: Optional[TransactionOutRecord] = None
         self.worksheet_name = worksheet_name
