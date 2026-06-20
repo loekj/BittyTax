@@ -214,5 +214,5 @@ def test_both_sided_record_is_not_self_paired() -> None:
     data_files: List[Any] = [SimpleNamespace(data_rows=[data_row])]
     pt_mode.merge_conversions(data_files)
 
-    assert data_row.t_record is not None  # not nulled by a spurious self-merge
+    assert data_row.t_record is not None  # not cleared by a spurious self-merge
     assert data_row.t_record.t_type == TrType.TRADE
